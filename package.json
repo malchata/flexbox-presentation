@@ -1,0 +1,21 @@
+{
+	"name": "flexbox-presentation",
+	"version": "0.1.0",
+	"description": "A Presentation on Flexbox Technology",
+	"main": "Gruntfile.js",
+	"dependencies": {
+		"grunt": "*",
+		"grunt-contrib-watch": "*",
+		"grunt-contrib-sass": "*"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author":{
+		"name": "Jeremy Wagner",
+		"url": "https://github.com/malchata/flexbox-presentation"
+	},
+	"devDependencies": {
+		"grunt": "*"
+	}
+}
