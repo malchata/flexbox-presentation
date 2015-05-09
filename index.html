@@ -5,16 +5,16 @@
 		<title>Wonderful Flexbox</title>
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Jeremy Wagner">
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css" id="theme">
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 		<script>
 			var link = document.createElement("link");
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
+			link.rel = "stylesheet";
+			link.type = "text/css";
 			link.href = window.location.search.match(/print-pdf/gi) ? "css/print/pdf.css" : "css/print/paper.css";
 			document.getElementsByTagName("head")[0].appendChild(link);
 		</script>
@@ -22,8 +22,22 @@
 	</head>
 	<body>
 		<div class="reveal">
+			<!--
+				 |     __|   __|  __|   \ |  _ \
+  				 |     _|   (_ |  _|   .  |  |  |
+ 				____| ___| \___| ___| _|\_| ___/
+
+ 				=================================
+
+				[1.0] - Title Card
+			-->
 			<div class="slides">
-				<!-- Begin Slides Here -->
+				<!-- [1.0] Title Card -->
+				<section>
+					<h1>Wonderful Flexbox</h1>
+					<h2>or Why I Left Box Model to Die.</h2>
+					<h4>Jeremy Wagner &mdash; <a href="https://twitter.com/malcata" target="_blank">@malchata</a></h4>
+				</section>
 			</div>
 		</div>
 		<script src="lib/js/head.min.js"></script>
@@ -34,8 +48,7 @@
 				progress: true,
 				history: true,
 				center: true,
-
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transition: "slide",
 
 				// Optional reveal.js plugins
 				dependencies:[{
