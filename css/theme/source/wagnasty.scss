@@ -8,10 +8,11 @@
 // ---------------------------------------------
 
 // Include theme-specific fonts
-@import url(//fonts.googleapis.com/css?family=Quicksand);
+@import url("//fonts.googleapis.com/css?family=Quicksand");
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #2980B9;
+$backgroundColor: #2980b9;
+$backgroundColor2: #3498db;
 
 $mainColor: #ecf0f1;
 $headingColor: #ecf0f1;
@@ -23,24 +24,46 @@ $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
-$linkColor: #2C3E50;
-$linkColorHover: lighten( $linkColor, 15% );
-$selectionBackgroundColor: lighten( $linkColor, 25% );
-
+$linkColor: #2c3e50;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
 $heading1Size: 2.25em;
 $heading2Size: 1.5em;
 $heading3Size: 1.25em;
 $heading4Size: 0.75em;
 
-section.has-light-background {
-	&, h1, h2, h3, h4, h5, h6 {
-		color: #222;
+section.has-light-background
+{
+	&,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6
+	{
+		color: #2980b9;
 	}
 }
 
-*[nowrap]
+*[no-wrap]
 {
 	white-space: nowrap;
+}
+
+*[normal-case]
+{
+	text-transform: none;
+}
+
+body
+{
+	@include radial-gradient($backgroundColor, $backgroundColor2);
+}
+
+hr
+{
+	opacity: 0.5;
 }
 
 // Theme template ------------------------------
