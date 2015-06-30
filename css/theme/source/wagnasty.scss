@@ -16,6 +16,8 @@ $backgroundColor2: #3498db;
 
 $mainColor: #ecf0f1;
 $headingColor: #ecf0f1;
+$accentColor: #e74c3c;
+$accentColor2: #2c3e50;
 
 $mainFontSize: 38px;
 $mainFont: "Quicksand", sans-serif;
@@ -24,10 +26,10 @@ $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
-$linkColor: #2c3e50;
-$linkColorHover: lighten($linkColor, 15%);
+$linkColor: lighten($accentColor, 15%);
+$linkColorHover: lighten($linkColor, 10%);
 $selectionBackgroundColor: lighten($linkColor, 25%);
-$heading1Size: 2.25em;
+$heading1Size: 2em;
 $heading2Size: 1.5em;
 $heading3Size: 1.25em;
 $heading4Size: 0.75em;
@@ -42,7 +44,7 @@ section.has-light-background
 	h5,
 	h6
 	{
-		color: #2980b9;
+		color: $accentColor2;
 	}
 }
 
@@ -56,14 +58,177 @@ section.has-light-background
 	text-transform: none;
 }
 
+code
+{
+	font-weight: 300;
+}
+
 body
 {
-	@include radial-gradient($backgroundColor, $backgroundColor2);
+	@include radial-gradient($accentColor2, $backgroundColor);
 }
 
 hr
 {
 	opacity: 0.5;
+}
+
+h1.ribbon
+{
+	position: relative;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+	text-shadow: 0, 1px 0 rgba(0, 0, 0, 0.3);
+	background: -webkit-linear-gradient(top, $accentColor, darken($accentColor, 15%));
+	clear: both;
+	display: inline-block;
+
+	span
+	{
+		display: block;
+		position: relative;
+		padding: 0 0.5em;
+
+		&:before,
+		&:after
+		{
+			font-size: 2.05em;
+			content: "";
+			position: absolute;
+			border-style: solid;
+			border-color: darken($accentColor, 35%) transparent transparent transparent;
+			bottom: -0.125em;
+			background-color: white;
+			-moz-background-clip: padding-box;
+			-webkit-background-clip: padding-box;
+			background-clip: padding-box;
+		}
+
+		&:before
+		{
+			border-width: 0.125em 0 0 0.125em;
+			left: 0.01em;
+		}
+
+		&:after
+		{
+			border-width: 0.125em 0.125em 0 0;
+			right: 0.01em;
+		}
+	}
+
+	&:after,
+	&:before
+	{
+		font-size: $heading1Size;
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: -1;
+		bottom: -0.125em;
+		box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+		border: 0.3em solid darken($accentColor, 25%);
+	}
+
+	&:after
+	{
+		right: -0.415em;
+		border-left-width: 0.25em;
+		border-right-color: transparent;
+	}
+
+	&:before
+	{
+		left: -0.415em;
+		border-right-width: 0.25em;
+		border-left-color: transparent;
+	}
+}
+
+h3.ribbon
+{
+	padding: 0;
+	position: relative;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+	text-shadow: 0, 1px 0 rgba(0, 0, 0, 0.3);
+	background: -webkit-linear-gradient(top, $accentColor, darken($accentColor, 15%));
+	clear: both;
+	display: inline-block;
+
+	span
+	{
+		display: block;
+		position: relative;
+		padding: 0 0.5em;
+
+		&:before,
+		&:after
+		{
+			font-size: 2.05em;
+			content: "";
+			position: absolute;
+			border-style: solid;
+			border-color: darken($accentColor, 35%) transparent transparent transparent;
+			top: -0.12em;
+			background-color: white;
+			-moz-background-clip: padding-box;
+			-webkit-background-clip: padding-box;
+			background-clip: padding-box;
+			transform: rotate(180deg);
+		}
+
+		&:before
+		{
+			border-width: 0.125em 0 0 0.125em;
+			right: 0.01em;
+		}
+
+		&:after
+		{
+			border-width: 0.125em 0.125em 0 0;
+			left: 0.01em;
+		}
+	}
+
+	&:after,
+	&:before
+	{
+		font-size: $heading1Size;
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: -1;
+		top: -0.125em;
+		box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+		border: 0.3em solid darken($accentColor, 25%);
+	}
+
+	&:after
+	{
+		right: -0.415em;
+		border-left-width: 0.25em;
+		border-right-color: transparent;
+	}
+
+	&:before
+	{
+		left: -0.415em;
+		border-right-width: 0.25em;
+		border-left-color: transparent;
+	}
+}
+
+img.round
+{
+	display: inline-block;
+	margin: 0 auto;
+	border: 0 !important;
+	border-radius: 50%;
+}
+
+img.reduceByHalf
+{
+	width: 50%;
+	height: auto;
 }
 
 // Theme template ------------------------------
