@@ -8,7 +8,7 @@
 // ---------------------------------------------
 
 // Include theme-specific fonts
-@import url("//fonts.googleapis.com/css?family=Quicksand");
+@import url("//fonts.googleapis.com/css?family=Quicksand:400,700");
 
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: #2980b9;
@@ -48,12 +48,22 @@ section.has-light-background
 	}
 }
 
-*[no-wrap]
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	font-weight: 400 !important;
+}
+
+.noWrap
 {
 	white-space: nowrap;
 }
 
-*[normal-case]
+.normalCase
 {
 	text-transform: none;
 }
@@ -217,6 +227,13 @@ h3.ribbon
 	}
 }
 
+img
+{
+	border-radius: 0.5em;
+	border: 0 !important;
+	box-shadow: 0 0 0.5em rgb(0, 0, 0);
+}
+
 img.round
 {
 	display: inline-block;
@@ -225,9 +242,15 @@ img.round
 	border-radius: 50%;
 }
 
-img.reduceByHalf
+img.reduceBy50
 {
 	width: 50%;
+	height: auto;
+}
+
+img.reduceBy25
+{
+	width: 75%;
 	height: auto;
 }
 

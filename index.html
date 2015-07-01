@@ -33,27 +33,35 @@
 				[2.0] - Background
 						[2.1] - The Dark Ages
 						[2.2] - Styling The Young Web
+						[2.3] - Seemed Great at the Time
+						[2.4] - Tables Anyone?
+						[2.5] - Seemed Great at the Time
 			-->
 			<div class="slides">
-				<!-- [1.0] - Title Card -->
+				<!--
+					[1.0] - Title Card
+				-->
 				<section>
-					<h1 no-wrap class="ribbon">
+					<h1 class="ribbon noWrap">
 						<span>Wonderful Flexbox</span>
 					</h1>
-					<img src="images/title_card.jpg" class="round" />
+					<img src="images/title_card.jpg" class="round" alt="Wonderful Flexbox">
 					<h3 class="ribbon">
 						<span>Leaving Box Model to Die.</span>
 					</h3>
 					<h4>
-						<span normal-case>by</span> Jeremy Wagner &mdash; <a href="https://twitter.com/malchata" target="_blank">@malchata</a>
-					</h4>
-					<h4>
-						<span normal-case><code>git</code> this talk: <a href="https://github.com/malchata/flexbox-presentation" target="_blank">github.com/malchata/flexbox-presentation</a></span>
+						<span class="normalCase">by</span> Jeremy Wagner &mdash; <a href="https://twitter.com/malchata" target="_blank">@malchata</a>
+						<hr>
+						<span class="normalCase"><code>git</code> this talk: <a href="https://github.com/malchata/flexbox-presentation" target="_blank">github.com/malchata/flexbox-presentation</a></span>
 					</h4>
 				</section>
-				<!-- [2.0] - Background -->
+				<!--
+					[2.0] - Background
+				-->
 				<section>
-					<!-- [2.1] - The Days of Old -->
+					<!--
+						[2.1] - The Days of Old
+					-->
 					<section>
 						<h1>The Days of Old</h1>
 						<aside class="notes">
@@ -61,16 +69,58 @@
 							- Speak to the frustration of styling the early web.
 						</aside>
 					</section>
-					<!-- [2.2] - Styling The Young Web -->
+					<!--
+						[2.2] - Styling The Young Web
+					-->
 					<section>
 						<h2>Styling the Young Web</h2>
-						<img class="fragment" src="images/altavista.jpg">
+						<img class="fragment" src="images/altavista.jpg" alt="Early AltaVista Design">
 						<aside class="notes">
 							- &lt;font&gt; tags.<br>
 							- &lt;center&gt; tags.<br>
 							- Lots of text in images.<br>
 							- Not many layout options.
 						</aside>
+					</section>
+					<!--
+						[2.3] - Seemed Great at the Time
+					-->
+					<section>
+						<h2>Seemed Great at The Time</h2>
+						<div class="fragment">
+							<h4>
+								<span class="normalCase">(But in retrospect...)</span>
+							</h4>
+							<img src="images/seriously.gif" alt="Seriously?">
+						</div>
+					</section>
+					<!--
+						[2.4] - Tables Anyone?
+					-->
+					<section>
+						<h2>Tables, Anyone?</h2>
+						<h4 class="fragment">
+							<span class="normalCase">With a side of spacer GIFs, perhaps?</span>
+						</h4>
+						<img class="fragment" src="images/apple.com.jpg" alt="Table-based Apple Website">
+					</section>
+					<!--
+						[2.5] - Seemed Great at the Time
+					-->
+					<section>
+						<h2>Seemed Great at The Time</h2>
+						<div class="fragment">
+							<h4>
+								<span class="normalCase">(But in retrospect...)</span>
+							</h4>
+							<img src="images/hector_1.gif" alt="Ding! Ding!">
+						</div>
+					</section>
+					<!--
+						[2.6] - Then Along Came CSS
+					-->
+					<section>
+						<h2>Then Along Came <strong>CSS</strong></h2>
 					</section>
 				</section>
 			</div>
@@ -80,10 +130,9 @@
 		<script>
 			Reveal.initialize({
 				controls: false,
-				progress: false,
+				progress: true,
 				history: true,
 				center: true,
-				transition: "slide",
 
 				// Optional reveal.js plugins
 				dependencies:[{
