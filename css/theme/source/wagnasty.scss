@@ -254,6 +254,55 @@ img.reduceBy25
 	height: auto;
 }
 
+ul li,
+p
+{
+	font-size: 0.75em !important;
+}
+
+span.pageWord
+{
+	position: relative;
+
+	&:after
+	{
+		width: 2.875em;
+		background-color: $mainColor;
+		content: "";
+		display: inline-block;
+		position: absolute;
+		right: -3.28em;
+		bottom: 0.2125em;
+		height: 0.625em;
+		opacity: 0.75;
+		top: 0.325em;
+	}
+}
+
+span.layoutWord
+{
+	position: relative;
+	top: 1.125em;
+
+	&:before
+	{
+		width: 2.375em;
+		background-color: $mainColor;
+		content: "";
+		display: inline-block;
+		position: absolute;
+		left: -2.75em;
+		bottom: 0.2125em;
+		height: 0.625em;
+		opacity: 0.75;
+	}
+}
+
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+.reveal .progress span
+{
+	background: $accentColor;
+}
