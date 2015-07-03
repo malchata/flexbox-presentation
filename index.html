@@ -18,6 +18,7 @@
 			link.href = window.location.search.match(/print-pdf/gi) ? "css/print/pdf.css" : "css/print/paper.css";
 			document.getElementsByTagName("head")[0].appendChild(link);
 		</script>
+		<script src="//flexbox.frontlineui.com:8080/jsbin/js/embed.min.js?3.30.3"></script>
 		<!--[if lt IE 9]><script src="lib/js/html5shiv.js"></script><![endif]-->
 	</head>
 	<body>
@@ -39,8 +40,7 @@
 				[3.0] - Box Model CSS
 						[3.1] - Then Along Came CSS
 						[3.2] - What CSS Has Given Us
-						[3.3] - Frustrations
-						[3.4] - Box Model: The Necessary Evil
+						[3.3] - Box Model: The Necessary Evil
 			-->
 			<div class="slides">
 				<!--
@@ -69,10 +69,6 @@
 					-->
 					<section>
 						<h1>The Days of Old</h1>
-						<aside class="notes">
-							- Emphasis the continuous improvement of web design.<br>
-							- Speak to the frustration of styling the early web.
-						</aside>
 					</section>
 					<!--
 						[2.2] - Styling The Young Web
@@ -80,12 +76,6 @@
 					<section>
 						<h2>Styling the Young Web</h2>
 						<img class="fragment" src="images/altavista.jpg" alt="Early AltaVista Design">
-						<aside class="notes">
-							- &lt;font&gt; tags.<br>
-							- &lt;center&gt; tags.<br>
-							- Lots of text in images.<br>
-							- Not many layout options.
-						</aside>
 					</section>
 					<!--
 						[2.3] - Seemed Great at the Time
@@ -139,7 +129,7 @@
 						[3.2] - What CSS Has Given Us
 					-->
 					<section>
-						<h2>What CSS Has Given Us</h2>
+						<h2>What <code>CSS</code> Has Given Us</h2>
 						<p class="fragment">
 							Separation between<br><code>&lt;markup&gt;</code><br>
 							and<br>
@@ -152,24 +142,21 @@
 							Control over<br>
 							<span class="pageWord">page</span> <span class="layoutWord">layout</span>
 						</p>
-						<aside class="notes">
-							- Be brief on these points.
-						</aside>
 					</section>
 					<!--
-						[3.3] - Frustrations
-					-->
-					<section>
-						<h2>But As Always</h2>
-						<h3>There Were Frustrations...</h3>
-						<img class="fragment" src="images/pizza_roof.gif" alt="Frustration!">
-					</section>
-					<!--
-						[3.4] - Box Model: The Necessary Evil
+						[3.3] - Box Model
 					-->
 					<section>
 						<h2>Box Model</h2>
-						<h3 class="fragment">The Neccessary Evil</h3>
+						<h4>The Foundation of All Elements</h4>
+						<img class="fragment noRadius" src="images/box_model.png" alt="Box Model Diagram">
+					</section>
+					<!--
+						[3.4] - Tinkering
+					-->
+					<section>
+						<h2>Old School Layout with CSS</h2>
+						<a class="jsbin-embed" href="http://flexbox.frontlineui.com:8080/jsbin/qoj/embed?html,css,output&amp;height=14em">JS Bin on jsbin.com</a>
 					</section>
 				</section>
 			</div>

@@ -254,6 +254,11 @@ img.reduceBy25
 	height: auto;
 }
 
+img.noRadius
+{
+	border-radius: 0;
+}
+
 ul li,
 p
 {
@@ -262,40 +267,21 @@ p
 
 span.pageWord
 {
+	font-size: 1.25em;
+	display: inline-block;
 	position: relative;
-
-	&:after
-	{
-		width: 2.875em;
-		background-color: $mainColor;
-		content: "";
-		display: inline-block;
-		position: absolute;
-		right: -3.28em;
-		bottom: 0.2125em;
-		height: 0.625em;
-		opacity: 0.75;
-		top: 0.325em;
-	}
+	top: 0.25em;
 }
 
 span.layoutWord
 {
+	font-size: 1.25em;
+	background-color: $mainColor;
+	display: inline-block;
+	color: $backgroundColor;
+	padding: 0 0.25em;
 	position: relative;
-	top: 1.125em;
-
-	&:before
-	{
-		width: 2.375em;
-		background-color: $mainColor;
-		content: "";
-		display: inline-block;
-		position: absolute;
-		left: -2.75em;
-		bottom: 0.2125em;
-		height: 0.625em;
-		opacity: 0.75;
-	}
+	top: 0.25em;
 }
 
 // Theme template ------------------------------
