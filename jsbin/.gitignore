@@ -7,7 +7,6 @@ public/js/prod
 !config.default.json
 statsd.js
 .allow-devtools-edit
-jsbin.sqlite
 node_modules
 public/runner.html
 tmp/*

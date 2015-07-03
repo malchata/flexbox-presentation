@@ -18,7 +18,7 @@
 			link.href = window.location.search.match(/print-pdf/gi) ? "css/print/pdf.css" : "css/print/paper.css";
 			document.getElementsByTagName("head")[0].appendChild(link);
 		</script>
-		<script src="//flexbox.frontlineui.com:8080/jsbin/js/embed.min.js?3.30.3"></script>
+		<script src="//localhost:3000/js/embed.min.js?3.30.3"></script>
 		<!--[if lt IE 9]><script src="lib/js/html5shiv.js"></script><![endif]-->
 	</head>
 	<body>
@@ -40,7 +40,8 @@
 				[3.0] - Box Model CSS
 						[3.1] - Then Along Came CSS
 						[3.2] - What CSS Has Given Us
-						[3.3] - Box Model: The Necessary Evil
+						[3.3] - Box Model: The Foundation of All Elements
+						[3.4] - Box Model Headaches: Floating Two Columns
 			-->
 			<div class="slides">
 				<!--
@@ -144,7 +145,7 @@
 						</p>
 					</section>
 					<!--
-						[3.3] - Box Model
+						[3.3] - Box Model: The Foundation of All Elements
 					-->
 					<section>
 						<h2>Box Model</h2>
@@ -152,11 +153,12 @@
 						<img class="fragment noRadius" src="images/box_model.png" alt="Box Model Diagram">
 					</section>
 					<!--
-						[3.4] - Tinkering
+						[3.4] - Box Model Headaches: Floating Two Columns
 					-->
 					<section>
-						<h2>Old School Layout with CSS</h2>
-						<a class="jsbin-embed" href="http://flexbox.frontlineui.com:8080/jsbin/qoj/embed?html,css,output&amp;height=14em">JS Bin on jsbin.com</a>
+						<h2>Box Model Headaches</h2>
+						<h4>Floating Two Columns</h4>
+						<a class="jsbin-embed" href="//localhost:3000/cav/embed?html,css,output&amp;height=12em">JS Bin on jsbin.com</a>
 					</section>
 				</section>
 			</div>
