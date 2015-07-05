@@ -46,6 +46,7 @@
 						[3.7] - Frustrated Yet?
 				[4.0] - Flexbox Slides
 						[4.1] - Introducing Flexbox
+						[4.2] - The Layout Modes
 			-->
 			<div class="slides">
 				<!--
@@ -68,7 +69,7 @@
 				<!--
 					[2.0] - Background
 				-->
-				<section data-background="#2c3e50">
+				<section data-background="#666666">
 					<!--
 						[2.1] - The Days of Old
 					-->
@@ -120,7 +121,7 @@
 				<!--
 					[3.0] - Box Model CSS
 				-->
-				<section>
+				<section data-background="#2c3e50">
 					<!--
 						[3.1] - Then Along Came CSS
 					-->
@@ -170,8 +171,8 @@
 					<section>
 						<h3>Box Model Headaches</h3>
 						<h4>Floating Two Columns</h4>
-						<div class="fragment">
-							<a class="jsbin-embed" href="//localhost:3000/cav/embed?html,css,output&amp;height=12em">Floating Two Columns</a>
+						<div>
+							<figure data-jsbin data-src="//localhost:3000/cav/embed?html,css,output" data-height="12em"></figure>
 						</div>
 					</section>
 					<!--
@@ -180,8 +181,8 @@
 					<section>
 						<h3>Box Model Headaches (Cont'd)</h3>
 						<h4>Equal Height List Items</h4>
-						<div class="fragment">
-							<a class="jsbin-embed" href="//localhost:3000/tit/embed?html,css,output&amp;height=12em">Floating Two Columns</a>
+						<div>
+							<figure data-jsbin data-src="//localhost:3000/tit/embed?html,css,output" data-height="12em"></figure>
 						</div>
 					</section>
 					<!--
@@ -201,13 +202,62 @@
 					-->
 					<section>
 						<h3>Introducing</h3>
-						<h1>Flexbox</h1>
+						<h1 class="ribbon" style="margin-bottom: 0.5em;"><span>Flexbox</span></h1>
 						<h4>A CSS layout technology<br>for the headache-prone.</h4>
+					</section>
+					<!--
+						[4.2] - The Layout Modes
+					-->
+					<section>
+						<h2>The Layout Modes</h2>
+						<ul class="centered">
+							<li class="fragment">
+								<b>block</b> layout<br>
+								 for laying out documents.
+							</li>
+							<li class="fragment">
+								<b>inline</b> layout<br>
+								for laying out text.
+							</li>
+							<li class="fragment">
+								<b>table</b> layout<br>
+								for laying out tabular data.
+							</li>
+							<li class="fragment">
+								<b>positioned</b> layout<br>
+								for laying out items outside of the structured flow.
+							</li>
+						</ul>
+					</section>
+					<!--
+						[4.3] - A New Layout Mode
+					-->
+					<section>
+						<h2>A New Layout Mode:</h2>
+						<h3><b>Flex</b> Layout</h3>
+						<ul class="centered">
+							<li class="fragment">Can be laid out in <b>any</b> direction.</li>
+							<li class="fragment">Can have their display orders <b>reversed</b> or <b>rearranged</b>.</li>
+							<li class="fragment">Can be laid out on a singular axis or wrapped onto multiple lines.</li>
+							<li class="fragment">Can <b>flex</b> sizes to <b>respond</b> to available space.</li>
+							<li class="fragment">Can be aligned with respect to the parent container or each other.</li>
+						</ul>
+					</section>
+					<!--
+						[4.4] - Starting With Flex Layout
+					-->
+					<section>
+						<h3>Starting With <b>Flex</b> Layout:</h3>
+						<h4>Just add <code class="normalCase">display: flex;</code></h4>
+						<div>
+							<figure data-jsbin data-src="//localhost:3000/wog/embed?html,css,output" data-height="13em"></figure>
+						</div>
 					</section>
 				</section>
 			</div>
 		</div>
 		<script src="//localhost:3000/js/embed.min.js?3.30.3"></script>
+		<script src="lib/js/jquery.min.js"></script>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 		<script>
@@ -256,6 +306,19 @@
 					}
 				]
 			});
+
+			Reveal.addEventListener("slidechanged", function(e){
+				var activeBins = document.querySelector("iframe[data-jsbin]");
+				var currentSlide = Reveal.getCurrentSlide();
+				var inactiveBins = currentSlide.querySelector("figure[data-jsbin]");
+
+				// Remove any active bins
+				activeBins.remove();
+			});
+
+			jsbinSnippetGenerator = function(frameSrc, frameHeight){
+				return "<iframe data-jsbin src=\"" + frameSrc + "\" style=\"height: " + frameHeight + "; width: 100%;\"></iframe>";
+			};
 		</script>
 	</body>
 </html>
