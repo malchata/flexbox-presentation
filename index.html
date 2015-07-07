@@ -31,7 +31,7 @@
 
 				[1.0] - Title Card
 				[2.0] - Background
-						[2.1] - The Dark Ages
+						[2.1] - The Days of Old
 						[2.2] - Styling The Young Web
 						[2.3] - Seemed Great at the Time
 						[2.4] - Tables Anyone?
@@ -44,9 +44,16 @@
 						[3.5] - Box Model Headaches: Floating Two Columns
 						[3.6] - Box Model Headaches: Equal Height Items
 						[3.7] - Frustrated Yet?
-				[4.0] - Flexbox Slides
+				[4.0] - Introductory Flexbox Slides
 						[4.1] - Introducing Flexbox
 						[4.2] - The Layout Modes
+						[4.3] - A New Layout Mode
+						[4.4] - Sounds Great, But...
+						[4.5] - Turns Out...
+						[4.6] - WIN
+				[5.0] - Flexbox in Action
+						[5.1] - Starting With Flex Layout
+						[5.2] - Flex Layout Defaults
 			-->
 			<div class="slides">
 				<!--
@@ -168,7 +175,7 @@
 					<!--
 						[3.5] - Box Model Headaches: Floating Two Columns
 					-->
-					<section>
+					<section id="vwv43q">
 						<h3>Box Model Headaches</h3>
 						<h4>Floating Two Columns</h4>
 						<div>
@@ -178,7 +185,7 @@
 					<!--
 						[3.6] - Box Model Headaches: Equal Height Items
 					-->
-					<section>
+					<section id="ceq322">
 						<h3>Box Model Headaches (Cont'd)</h3>
 						<h4>Equal Height List Items</h4>
 						<div>
@@ -194,7 +201,7 @@
 					</section>
 				</section>
 				<!--
-					[4.0] - Flexbox Slides
+					[4.0] - Introductory Flexbox Slides
 				-->
 				<section>
 					<!--
@@ -244,19 +251,60 @@
 						</ul>
 					</section>
 					<!--
-						[4.4] - Starting With Flex Layout
+						[4.4] - Sounds Great, But...
 					-->
 					<section>
+						<h1>Sounds Great, But...</h1>
+						<h3>What's The <b>Browser Support?</b></h3>
+					</section>
+					<!--
+						[4.5] - Turns Out...
+					-->
+					<section>
+						<h2>Turns Out...</h2>
+						<div class="fragment">
+							<img class="noRadius" src="images/flexbox_support.png" alt="Flexbox Support">
+							<h3>Not Too Shabby!</h3>
+						</div>
+					</section>
+					<!--
+						[4.6] - WIN
+					-->
+					<section>
+						<h2><b>WIN</b></h2>
+						<img src="images/jesse_magnets.gif" alt="YEAH!">
+					</section>
+				</section>
+				<!--
+					[5.0] - Flexbox in Action
+				-->
+				<section>
+					<!--
+						[5.1] - Starting With Flex Layout
+					-->
+					<section id="hpfq2">
 						<h3>Starting With <b>Flex</b> Layout:</h3>
 						<h4>Just add <code class="normalCase">display: flex;</code></h4>
 						<div>
 							<figure data-jsbin data-src="//localhost:3000/wog/embed?html,css,output" data-height="13em"></figure>
 						</div>
 					</section>
+					<!--
+						[5.2] - Flex Layout Defaults
+					-->
+					<section>
+						<h3>Flex Layout Defaults</h3>
+						<h4>Items given a <code class="normalCase">display</code> type of <code class="normalCase">flex</code> do the following:</h4>
+						<ul class="centered">
+							<li class="fragment">Act like <code class="normalCase">block</code> layout items by clearing items and expanding to the width of the parent container.</li>
+							<li class="fragment">Align their children to the left and ignore all margins.</li>
+							<li class="fragment">Do not allow their children to wrap.</li>
+							<li class="fragment">Arrange their children in rows.</li>
+						</ul>
+					</section>
 				</section>
 			</div>
 		</div>
-		<script src="//localhost:3000/js/embed.min.js?3.30.3"></script>
 		<script src="lib/js/jquery.min.js"></script>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
@@ -308,12 +356,29 @@
 			});
 
 			Reveal.addEventListener("slidechanged", function(e){
-				var activeBins = document.querySelector("iframe[data-jsbin]");
-				var currentSlide = Reveal.getCurrentSlide();
-				var inactiveBins = currentSlide.querySelector("figure[data-jsbin]");
 
-				// Remove any active bins
-				activeBins.remove();
+				// Get the current slide element
+				var currentSlide = Reveal.getCurrentSlide();
+				var currentSlideId = currentSlide.getAttribute("id");
+
+				// Get the previous slide element
+				var previousSlide = Reveal.getPreviousSlide();
+				var previousSlideId = previousSlide.getAttribute("id");
+
+				// Check if the current slide has an ID
+				if(currentSlideId !== null){
+					var currentSlideById = $("section#" + currentSlideId);
+					var inactiveBin = currentSlideById.find("figure[data-jsbin]");
+					inactiveBin.after(jsbinSnippetGenerator(inactiveBin.data("src"), inactiveBin.data("height")));
+				}
+
+				// Check if the previous slide has an ID
+				if(previousSlideId !== null){
+					var previousSlideById = $("section#" + previousSlideId);
+					previousSlideById.find("iframe[data-jsbin]").fadeOut(250, function(){
+						previousSlideById.find("iframe[data-jsbin]").remove();
+					});
+				}
 			});
 
 			jsbinSnippetGenerator = function(frameSrc, frameHeight){
