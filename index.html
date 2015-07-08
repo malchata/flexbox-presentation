@@ -284,7 +284,7 @@
 					-->
 					<section id="hpfq2">
 						<h3>Starting With <b>Flex</b> Layout:</h3>
-						<h4>Just add <code class="normalCase">display: flex;</code></h4>
+						<h4>Just add <code class="normalCase">display: flex;</code> to a parent container.</h4>
 						<div>
 							<figure data-jsbin data-src="//localhost:3000/wog/embed?html,css,output" data-height="13em"></figure>
 						</div>
@@ -297,9 +297,11 @@
 						<h4>Items given a <code class="normalCase">display</code> type of <code class="normalCase">flex</code> do the following:</h4>
 						<ul class="centered">
 							<li class="fragment">Act like <code class="normalCase">block</code> layout items by clearing items and expanding to the width of the parent container.</li>
-							<li class="fragment">Align their children to the left and ignore all margins.</li>
-							<li class="fragment">Do not allow their children to wrap.</li>
-							<li class="fragment">Arrange their children in rows.</li>
+							<li class="fragment">Align their children to the <b>top left</b> of the <b>parent container</b>.</li>
+							<li class="fragment"><b>Do not</b> allow their children to <b>wrap</b>.</li>
+							<li class="fragment"><b>Arrange</b> their children in <b>rows</b>.</li>
+							<li class="fragment">Appear in the <b>order defined</b> by the <b>markup</b>.</li>
+							<li class="fragment"><b>Stretch to fit</b> the height of the <b>parent container</b>.</li>
 						</ul>
 					</section>
 				</section>
@@ -356,7 +358,6 @@
 			});
 
 			Reveal.addEventListener("slidechanged", function(e){
-
 				// Get the current slide element
 				var currentSlide = Reveal.getCurrentSlide();
 				var currentSlideId = currentSlide.getAttribute("id");
