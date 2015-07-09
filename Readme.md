@@ -1,5 +1,5 @@
-#Wonderful Flexbox
-##Leaving Box Model to Die
+#The Flexbox Cometh
+##Champion of The LAyout
 ####by Jeremy Wagner ([@malchata](http://twitter.com/malchata))
 
 #####Presented using [reveal.js](http://lab.hakim.se/reveal-js)
