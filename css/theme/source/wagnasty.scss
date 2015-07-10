@@ -71,6 +71,7 @@ h6
 code
 {
 	font-weight: 300;
+	text-transform: none;
 }
 
 body
@@ -240,18 +241,6 @@ img.round
 	margin: 0 auto;
 	border: 0 !important;
 	border-radius: 50%;
-}
-
-img.reduceBy50
-{
-	width: 50%;
-	height: auto;
-}
-
-img.reduceBy25
-{
-	width: 75%;
-	height: auto;
 }
 
 img.noRadius

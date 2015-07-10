@@ -40,7 +40,7 @@
 						[3.1] - Then Along Came CSS
 						[3.2] - What CSS Has Given Us
 						[3.3] - Box Model: The Foundation of All Elements
-						[3.4] - Box Model: The Source of All Headaches <-- BUGGY SLIDE (Chrome for OSX)
+						[3.4] - Box Model: The Source of All Headaches
 						[3.5] - Box Model Headaches: Floating Two Columns
 						[3.6] - Box Model Headaches: Equal Height Items
 						[3.7] - Feeling Defeated?
@@ -52,9 +52,13 @@
 						[4.5] - Turns Out...
 						[4.6] - WIN
 				[5.0] - Flexbox in Action
-						[5.1] - Beginning With Flexbox
-						[5.2] - Flexbox Defaults
-						[5.3] - Wrapping Flex Items
+						[5.1] - Flexbox Mechanics
+						[5.2] - Beginning With Flexbox
+						[5.3] - Flexbox Defaults
+				[6.0] - Properties for Parent Items
+						[6.1] - Properties for Parent Items
+						[6.2] - Flex Direction
+						[6.3] - Wrapping Flex Items
 			-->
 			<div class="slides">
 				<!--
@@ -130,7 +134,7 @@
 				<!--
 					[3.0] - Box Model CSS
 				-->
-				<section data-background="#2c3e50">
+				<section data-background="rgba(44, 62, 80, 0.875)">
 					<!--
 						[3.1] - Then Along Came CSS
 					-->
@@ -285,39 +289,93 @@
 				-->
 				<section>
 					<!--
-						[5.1] - Beginning With Flexbox
+						[5.1] - Flexbox Mechanics
+					-->
+					<section>
+						<h2>Flexbox Mechanics</h2>
+						<h3>A Tale of Two <b>Property Types:</b></h3>
+						<h4 class="fragment">Properties that apply to the <b>parent container</b></h4>
+						<div class="fragment">
+							<h4>Properties that apply to the container's <b>child items</b></h4>
+							<img class="noRadius" src="images/container_types.png" alt="Container Types">
+						</div>
+					</section>
+					<!--
+						[5.2] - Beginning With Flexbox
 					-->
 					<section id="hpfq2">
 						<h3>Starting With <b>Flex</b> Layout:</h3>
-						<h4>Just add <code class="normalCase">display: flex;</code> to a parent container.</h4>
+						<h4>Just add <code>display: flex;</code> to a parent container.</h4>
 						<div>
 							<figure data-jsbin data-src="//localhost:3000/pov/embed?html,css,output" data-height="13em"></figure>
 						</div>
 					</section>
 					<!--
-						[5.2] - Flexbox Defaults
+						[5.3] - Flexbox Defaults
 					-->
 					<section>
 						<h3>Flex Layout Defaults</h3>
-						<h4>Items given a <code class="normalCase">display</code> type of <code class="normalCase">flex</code> do the following:</h4>
+						<h4>Items given a <code>display</code> type of <code>flex</code> do the following:</h4>
 						<ul class="centered">
-							<li class="fragment">Act like <code class="normalCase">block</code> layout items by clearing items and expanding to the width of the parent container.</li>
-							<li class="fragment">Align their children to the <b>top left</b> of the <b>parent container</b>.</li>
+							<li class="fragment">Act like <code>block</code> layout items by clearing items and expanding to the width of the parent container.</li>
 							<li class="fragment"><b>Do not</b> allow their children to <b>wrap</b>.</li>
+							<li class="fragment">Align their children to the <b>top left</b> of the <b>parent container</b>.</li>
 							<li class="fragment"><b>Arrange</b> their children in <b>rows</b>.</li>
 							<li class="fragment">Appear in the <b>order defined</b> by the <b>markup</b>.</li>
 							<li class="fragment"><b>Stretch to fit</b> the height of the <b>parent container</b>.</li>
 						</ul>
 					</section>
+				</section>
+				<!--
+					[6.1] - Flexbox Properties for Parent Items
+				-->
+				<section>
 					<!--
-						[5.3] - Wrapping Flex Items
+						[6.1] - Flexbox Properties for Parent Items
+					-->
+					<section>
+						<h1>Flexbox Properties for <b>Parent Items</b></h1>
+					</section>
+					<!--
+						[6.2] - Flex Direction
+					-->
+					<section id="qwefc">
+						<h3>Flex Direction</h3>
+						<h4>Use <code>flex-direction</code></h4>
+						<div>
+							<figure data-jsbin data-src="//localhost:3000/gof/embed?html,css,output" data-height="10em"></figure>
+						</div>
+						<p>
+							Valid values:<br>
+							<code><u>row</u></code> | <code>row-reverse</code> | <code>column</code> | <code>column-reverse</code>
+						</p>
+					</section>
+					<!--
+						[6.3] - Wrapping Flex Items
 					-->
 					<section id="f23f">
 						<h3>Wrapping Flex Items</h3>
-						<h4>Use <code class="normalCase">flex-wrap: wrap;</code> to enforce wrapping.</h4>
+						<h4>Use <code>flex-wrap: wrap;</code> to force wrapping of child items.</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/mir/embed?css,output" data-height="13em"></figure>
+							<figure data-jsbin data-src="//localhost:3000/mir/embed?css,output" data-height="11em"></figure>
 						</div>
+						<p>
+							Valid values:<br>
+							<code><u>nowrap</u></code> | <code>wrap</code> | <code>wrap-reverse</code>
+						</p>
+					</section>
+					<!--
+						[6.3] - Distributing Flex Items
+					-->
+					<section id="opher">
+						<h3>Distributing Flex Items</h3>
+						<h4>Use <code>justify-content</code> to distribute child items.</h4>
+						<div>
+						</div>
+						<p>
+							Valid values:<br>
+							<code><u>flex-start</u></code> | <code>flex-end</code> | <code>center</code> | <code>space-between</code> | <code>space-around</code>
+						</p>
 					</section>
 				</section>
 			</div>
@@ -353,10 +411,6 @@
 					},
 					{
 						src: "plugin/zoom-js/zoom.js",
-						async: true
-					},
-					{
-						src: "plugin/notes/notes.js",
 						async: true
 					}
 				]
