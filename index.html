@@ -55,10 +55,12 @@
 						[5.1] - Flexbox Mechanics
 						[5.2] - Beginning With Flexbox
 						[5.3] - Flexbox Defaults
-				[6.0] - Properties for Parent Items
-						[6.1] - Properties for Parent Items
+				[6.0] - Properties for Parent Containers
+						[6.1] - Properties for Parent Containers
 						[6.2] - Flex Direction
 						[6.3] - Wrapping Flex Items
+						[6.4] - Aligning Flex Items
+						[6.5] - Aligning Flex Items (Cont'd)
 			-->
 			<div class="slides">
 				<!--
@@ -327,14 +329,14 @@
 					</section>
 				</section>
 				<!--
-					[6.0] - Flexbox Properties for Parent Items
+					[6.0] - Flexbox Properties for Parent Containers
 				-->
 				<section>
 					<!--
-						[6.1] - Flexbox Properties for Parent Items
+						[6.1] - Flexbox Properties for Parent Containers
 					-->
 					<section>
-						<h1>Flexbox Properties for <b>Parent Items</b></h1>
+						<h1>Flexbox Properties for <b>Parent Containers</b></h1>
 					</section>
 					<!--
 						[6.2] - Flex Direction
@@ -347,7 +349,8 @@
 						</div>
 						<p>
 							Valid values:<br>
-							<code><u>row</u></code> | <code>row-reverse</code> | <code>column</code> | <code>column-reverse</code>
+							<code><u>row</u></code> | <code>row-reverse</code> | <code>column</code>
+							<br><code>column-reverse</code>
 						</p>
 					</section>
 					<!--
@@ -375,7 +378,8 @@
 						</div>
 						<p>
 							Valid values:<br>
-							<code><u>flex-start</u></code> | <code>flex-end</code> | <code>center</code> | <code>space-between</code> | <code>space-around</code>
+							<code><u>flex-start</u></code> | <code>flex-end</code> | <code>center</code><br>
+							<code>space-between</code> | <code>space-around</code>
 						</p>
 					</section>
 					<!--
@@ -389,7 +393,24 @@
 						</div>
 						<p>
 							Valid values:<br>
-							<code><u>stretch</u></code> | <code>flex-start</code> | <code>flex-end</code> | <code>center</code> | <code>baseline</code>
+							<code><u>stretch</u></code> | <code>flex-start</code> | <code>flex-end</code><br>
+							<code>center</code> | <code>baseline</code>
+						</p>
+					</section>
+					<!--
+						[6.5] - Aligning Flex Items (Cont'd)
+					-->
+					<section id="ahq34g">
+						<h3>Aligning Flex Items (Cont'd)</h3>
+						<h4>Use <code>align-content</code> to vertically distribute items.</h4>
+						<p>(Only effective on certain scenarios.)</p>
+						<div>
+							<figure data-jsbin data-src="//localhost:3000/buh/embed?css,output" data-height="10em"></figure>
+						</div>
+						<p>
+							Valid values:<br>
+							<code><u>stretch</u></code> | <code>flex-start</code> | <code>flex-end</code><br>
+							<code>center</code> | <code>space-between</code> | <code>space-around</code>
 						</p>
 					</section>
 				</section>
