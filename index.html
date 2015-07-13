@@ -61,6 +61,9 @@
 						[6.3] - Wrapping Flex Items
 						[6.4] - Aligning Flex Items
 						[6.5] - Aligning Flex Items (Cont'd)
+				[7.0] - Properties for Child Items
+						[7.1] - Properties for Child Items
+						[7.2] - Changing Item Order
 			-->
 			<div class="slides">
 				<!--
@@ -296,11 +299,9 @@
 					<section>
 						<h2>Flexbox Mechanics</h2>
 						<h3>A Tale of Two <b>Property Types:</b></h3>
+						<img class="fragment noRadius" src="images/container_types.png" alt="Container Types">
 						<h4 class="fragment">Properties that apply to the <b>parent container</b></h4>
-						<div class="fragment">
-							<h4>Properties that apply to the container's <b>child items</b></h4>
-							<img class="noRadius" src="images/container_types.png" alt="Container Types">
-						</div>
+						<h4 class="fragment">Properties that apply to the container's <b>child items</b></h4>
 					</section>
 					<!--
 						[5.2] - Beginning With Flexbox
@@ -309,8 +310,11 @@
 						<h3>Starting With <b>Flex</b> Layout:</h3>
 						<h4>Just add <code>display: flex;</code> to a parent container.</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/pov/embed?html,css,output" data-height="13em"></figure>
+							<figure data-jsbin data-src="//localhost:3000/pov/embed?html,css,output" data-height="11em"></figure>
 						</div>
+						<p>
+							<b>Hint:</b> Use a <code>display</code> type of <code>inline-flex</code> if the parent container needs to behave similar to an <code>inline-block</code> element.
+						</p>
 					</section>
 					<!--
 						[5.3] - Flexbox Defaults
@@ -329,14 +333,17 @@
 					</section>
 				</section>
 				<!--
-					[6.0] - Flexbox Properties for Parent Containers
+					[6.0] - Properties for Parent Containers
 				-->
 				<section>
 					<!--
-						[6.1] - Flexbox Properties for Parent Containers
+						[6.1] - Properties for Parent Containers
 					-->
 					<section>
-						<h1>Flexbox Properties for <b>Parent Containers</b></h1>
+						<h1>
+							Properties for<br>
+							<b>Parent Containers</b>
+						</h1>
 					</section>
 					<!--
 						[6.2] - Flex Direction
@@ -345,10 +352,10 @@
 						<h3>Flex Direction</h3>
 						<h4>Use <code>flex-direction</code></h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/min/embed?html,css,output" data-height="10em"></figure>
+							<figure data-jsbin data-src="//localhost:3000/haq/embed?html,css,output" data-height="10em"></figure>
 						</div>
 						<p>
-							Valid values:<br>
+							<b>Valid values:</b><br>
 							<code><u>row</u></code> | <code>row-reverse</code> | <code>column</code>
 							<br><code>column-reverse</code>
 						</p>
@@ -360,10 +367,10 @@
 						<h3>Wrapping Flex Items</h3>
 						<h4>Use <code>flex-wrap: wrap;</code> to force wrapping of child items.</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/mir/embed?css,output" data-height="12em"></figure>
+							<figure data-jsbin data-src="//localhost:3000/hil/embed?css,output" data-height="12em"></figure>
 						</div>
 						<p>
-							Valid values:<br>
+							<b>Valid values:</b><br>
 							<code><u>nowrap</u></code> | <code>wrap</code> | <code>wrap-reverse</code>
 						</p>
 					</section>
@@ -374,10 +381,10 @@
 						<h3>Distributing Flex Items</h3>
 						<h4>Use <code>justify-content</code> to distribute child items.</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/zal/embed?css,output" data-height="12em"></figure>
+							<figure data-jsbin data-src="//localhost:3000/cav/embed?css,output" data-height="11em"></figure>
 						</div>
 						<p>
-							Valid values:<br>
+							<b>Valid values:</b><br>
 							<code><u>flex-start</u></code> | <code>flex-end</code> | <code>center</code><br>
 							<code>space-between</code> | <code>space-around</code>
 						</p>
@@ -389,10 +396,10 @@
 						<h3>Aligning Flex Items</h3>
 						<h4>Use <code>align-items</code> to align items on a horizontal axis.</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/woj/embed?css,output" data-height="12em"></figure>
+							<figure data-jsbin data-src="//localhost:3000/nip/embed?css,output" data-height="11em"></figure>
 						</div>
 						<p>
-							Valid values:<br>
+							<b>Valid values:</b><br>
 							<code><u>stretch</u></code> | <code>flex-start</code> | <code>flex-end</code><br>
 							<code>center</code> | <code>baseline</code>
 						</p>
@@ -405,12 +412,70 @@
 						<h4>Use <code>align-content</code> to vertically distribute items.</h4>
 						<p>(Only effective on certain scenarios.)</p>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/buh/embed?css,output" data-height="10em"></figure>
+							<figure data-jsbin data-src="//localhost:3000/coj/embed?css,output" data-height="10em"></figure>
 						</div>
 						<p>
-							Valid values:<br>
+							<b>Valid values:</b><br>
 							<code><u>stretch</u></code> | <code>flex-start</code> | <code>flex-end</code><br>
 							<code>center</code> | <code>space-between</code> | <code>space-around</code>
+						</p>
+					</section>
+				</section>
+				<!--
+					[7.0] - Properties for Child Items
+				-->
+				<section>
+					<!--
+						[7.1] - Properties for Child Items
+					-->
+					<section>
+						<h1>
+							Properties for<br>
+							<b>Child Items</b>
+						</h1>
+					</section>
+					<!--
+						[7.2] - Changing Item Order
+					-->
+					<section id="vdavd3">
+						<h3>Changing Item Order</h3>
+						<h4>Use <code>order</code> to rearrange elements in a flex container.</h4>
+						<div>
+							<figure data-jsbin data-src="//localhost:3000/mif/embed?css,output" data-height="10em"></figure>
+						</div>
+						<p>
+							<b>Valid values:</b><br>
+							Any integer, including negative values.<br>
+							Default: <code>order: 0;</code>.
+					</section>
+					<!--
+						[7.3] - Establishing Default Item Size
+					-->
+					<section id="avfv4">
+						<h3>Establishing Default Item Size</h3>
+						<h4>Use <code>flex-basis</code> to set an item's default width.</h4>
+						<p>(In flex column layouts, this sets an item's default height.)</p>
+						<div>
+							<figure data-jsbin data-src="//localhost:3000/tot/embed?css,output" data-height="10em"></figure>
+						</div>
+						<p>
+							<b>Valid values:</b><br>
+							Any valid CSS expression for width or height.
+						</p>
+					</section>
+					<!--
+						[7.4] - Aligning Individual Items
+					-->
+					<section id="vas44">
+						<h3>Aligning Individual Items</h3>
+						<h4>Use <code>align-self</code> to align individual items.</h4>
+						<p>(May not work in some scenarios.)</p>
+						<div>
+							<figure data-jsbin data-src="//localhost:3000/naj/embed?css,output" data-height="10em"></figure>
+						</div>
+						<p>
+							<b>Valid values:</b><br>
+							<code><u>stretch</u></code> | <code>flex-start</code> | <code>flex-end</code> | <code>center</code> | <code>baseline</code>
 						</p>
 					</section>
 				</section>
