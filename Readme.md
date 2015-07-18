@@ -17,6 +17,8 @@ At the time of this writing, Flexbox has very widespread support. Flexbox should
 
 ##Running This Talk Locally
 
+This talk has hard-coded references for local files, therefore, a local hostname of `flexbox.frontlineui.com` is necessary for the talk to work 100%.
+
 Since a local copy of [jsbin](https://github.com/jsbin/jsbin) is used, there's more to viewing this project than simply cloning the repo and running it in your web browser.  You'll need to traverse into the `jsbin` directory in the project and perform some shell commands:
 
 ```
@@ -25,9 +27,9 @@ npm install
 bin/jsbin
 ```
 
-This will run the jsbin server on localhost on port 3000.  The talk embeds iframes to fiddles relevant to the presentation.  If you run the presentation without it, all fiddle embeds will appear as text links.
+This will run the jsbin server on localhost on port 3000.  The talk embeds iframes to fiddles relevant to the presentation.  If you run the presentation without it, all fiddle embeds will appear broken.
 
-I'm not immediately sure of all the dependencies, but I know that Windows users will have to install Python.  Since OSX comes with Python out of the box, the hurdles encountered will vary from system to system.  I suspect *nix users will have an easier go of it than Windows users.
+I'm not immediately sure of all the dependencies, but I know that Windows users will have to install Python.  The version of Python you install is important, since a node dependency for jsbin seems to prefer Python 3.0 or less.  Since OSX comes with Python out of the box, I had very little in the way of difficulties.  I suspect *nix users will have an easier go of it than Windows users.
 
 ##Talk Events
 
