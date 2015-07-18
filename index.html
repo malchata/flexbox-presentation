@@ -66,7 +66,10 @@
 						[8.3] - Equal Height Galleries
 						[8.4] - Scrollable Equal Height Galleries
 						[8.5] - Easy Proportional Tabs
+						[8.6] - Responsive Layout Reordering
 				[9.0] - Vendor Prefixes
+						[9.1] - BEWARE!
+						[9.2] - Prefix Weirdness
 			-->
 			<div class="slides">
 				<!--
@@ -540,7 +543,6 @@
 					<section id="v3q4vq">
 						<h3>Equal Height Content Galleries</h3>
 						<figure data-jsbin data-src="//localhost:3000/xux/embed?css,output" data-height="13em"></figure>
-						<p>No futzing around with <code>min-height</code> or JavaScript.</p>
 					</section>
 					<!--
 						[8.4] - Scrollable Equal Height Galleries
@@ -554,7 +556,38 @@
 					-->
 					<section id="c3t56">
 						<h3>Easy Proportional Tabs</h3>
-						<figure data-jsbin data-src="//localhost:3000/dal/embed?css,output" data-height="13em"></figure>
+						<figure data-jsbin data-src="//localhost:3000/qiw/embed?css,output" data-height="13em"></figure>
+					</section>
+					<!--
+						[8.6] - Responsive Layout Reordering
+					-->
+					<section id="avq3g90h">
+						<h3>Responsive Layout Reordering</h3>
+					</section>
+				</section>
+				<!--
+					[9.0] - Vendor Prefixes
+				-->
+				<section>
+					<!--
+						[9.1] - BEWARE!
+					-->
+					<section>
+						<h1><b>Beware!</b></h1>
+						<h2>Vendor Prefixes Ahead</h2>
+					</section>
+					<!--
+						[9.2] - Prefix Weirdness
+					-->
+					<section>
+						<h1>Weird Vendor Prefixes</h1>
+						<code class="leftAlign">
+							display: -webkit-flex;<br>
+							display: -moz-flex;<br>
+							display: -ms-flexbox;<br>
+							display: -ms-flex;<br>
+							display: flex;
+						</code>
 					</section>
 				</section>
 			</div>
@@ -579,7 +612,7 @@
 				var previousSlide = Reveal.getPreviousSlide();
 				var previousSlideId = previousSlide.getAttribute("id");
 
-				// Check if the current slide has an ID
+				// Check if the current side has an ID
 				if(currentSlideId !== null){
 					var currentSlideById = $("section#" + currentSlideId);
 					var inactiveBin = currentSlideById.find("figure[data-jsbin]");
