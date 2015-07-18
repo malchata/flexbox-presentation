@@ -1,5 +1,5 @@
 #The Flexbox Cometh
-##Champion of The LAyout
+##Champion of The Layout
 ####by Jeremy Wagner ([@malchata](http://twitter.com/malchata))
 
 #####Presented using [reveal.js](http://lab.hakim.se/reveal-js)
@@ -7,9 +7,11 @@
 
 ##Overview
 
-This is a talk on Flexbox, a CSS layout technology that allows for much more flexible and powerful arrangement of elements than typical box model properties allow.
+This is a talk on Flexbox, a CSS layout technology that allows for much more flexible and powerful arrangement of elements than typical box model properties allow. Flexbox, among other things, provides avenues to automatically fill horizontal and vertical space, alignment and reordering of the presentation of items in a document structure if need be.
 
-The talk is still under development. Check back periodically for developments.
+At the time of this writing, Flexbox has very widespread support. Flexbox should be considered safe to use if you are not aiming to support users beneath IE10.  All other browsers should be considered totally safe, although vendor prefixes are encouraged for maximum capability, and this is briefly covered in the talk.
+
+*The talk is still under development. Check back periodically for developments.*
 
 ---
 
@@ -24,6 +26,8 @@ bin/jsbin
 ```
 
 This will run the jsbin server on localhost on port 3000.  The talk embeds iframes to fiddles relevant to the presentation.  If you run the presentation without it, all fiddle embeds will appear as text links.
+
+I'm not immediately sure of all the dependencies, but I know that Windows users will have to install Python.  Since OSX comes with Python out of the box, the hurdles encountered will vary from system to system.  I suspect *nix users will have an easier go of it than Windows users.
 
 ##Talk Events
 
