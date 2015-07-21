@@ -8,9 +8,9 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/wagnasty.css" id="theme">
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/css/zenburn.min.css">
 	</head>
 	<body>
 		<div class="reveal">
@@ -55,9 +55,9 @@
 						[6.5] - Aligning Flex Items (Cont'd)
 				[7.0] - Properties for Child Items
 						[7.1] - Properties for Child Items
-						[7.2] - Changing Item Order
-						[7.3] - Establishing Default Item Size
-						[7.4] - Aligning Individual Items
+						[7.2] - Aligning Individual Items
+						[7.3] - Changing Item Order
+						[7.4] - Establishing Default Item Size
 						[7.5] - Growing Flex Items
 						[7.6] - Preventing Shrinking of Flex Items
 				[8.0] - Practical Applications
@@ -379,7 +379,7 @@
 					-->
 					<section id="f23f">
 						<h3>Wrapping Flex Items</h3>
-						<h4>Use <code>flex-wrap: wrap;</code> to force wrapping of child items.</h4>
+						<h4>Use <code>flex-wrap</code> to affect child item wrapping.</h4>
 						<div>
 							<figure data-jsbin data-src="//localhost:3000/hil/embed?css,output" data-height="12em"></figure>
 						</div>
@@ -450,36 +450,7 @@
 						<img src="images/dumpster_baby.png" alt="There's a baby in this dumpster.">
 					</section>
 					<!--
-						[7.2] - Changing Item Order
-					-->
-					<section id="vdavd3">
-						<h3>Changing Item Order</h3>
-						<h4>Use <code>order</code> to rearrange elements in a flex container.</h4>
-						<div>
-							<figure data-jsbin data-src="//localhost:3000/mif/embed?css,output" data-height="10em"></figure>
-						</div>
-						<p>
-							<b>Valid values:</b><br>
-							Any integer, including negative values.<br>
-							Default: <code>order: 0;</code>.
-					</section>
-					<!--
-						[7.3] - Establishing Default Item Size
-					-->
-					<section id="avfv4">
-						<h3>Establishing Default Item Size</h3>
-						<h4>Use <code>flex-basis</code> to set an item's default width.</h4>
-						<p>(In flex column layouts, this sets an item's default height.)</p>
-						<div>
-							<figure data-jsbin data-src="//localhost:3000/tot/embed?css,output" data-height="10em"></figure>
-						</div>
-						<p>
-							<b>Valid values:</b><br>
-							Any valid CSS expression for width or height.
-						</p>
-					</section>
-					<!--
-						[7.4] - Aligning Individual Items
+						[7.2] - Aligning Individual Items
 					-->
 					<section id="vas44">
 						<h3>Aligning Individual Items</h3>
@@ -491,6 +462,35 @@
 						<p>
 							<b>Valid values:</b><br>
 							<code><u>stretch</u></code> | <code>flex-start</code> | <code>flex-end</code> | <code>center</code> | <code>baseline</code>
+						</p>
+					</section>
+					<!--
+						[7.3] - Changing Item Order
+					-->
+					<section id="vdavd3">
+						<h3>Changing Item Order</h3>
+						<h4>Use <code>order</code> to rearrange elements in a flex container.</h4>
+						<div>
+							<figure data-jsbin data-src="//localhost:3000/mif/embed?css,output" data-height="10em"></figure>
+						</div>
+						<p>
+							<b>Valid values:</b><br>
+							Any integer, including negative values.<br>
+							Default: <code>order: 0;</code>
+					</section>
+					<!--
+						[7.4] - Establishing Default Item Size
+					-->
+					<section id="avfv4">
+						<h3>Establishing Default Item Size</h3>
+						<h4>Use <code>flex-basis</code> to set an item's default width.</h4>
+						<p>(In flex column layouts, this sets an item's default height.)</p>
+						<div>
+							<figure data-jsbin data-src="//localhost:3000/tot/embed?css,output" data-height="10em"></figure>
+						</div>
+						<p>
+							<b>Valid values:</b><br>
+							Any valid CSS expression for width or height.
 						</p>
 					</section>
 					<!--
@@ -641,7 +641,7 @@
 						</div>
 						<p>
 							From this gist:<br>
-							<a href="https://gist.github.com/jayj/4012969" target="_blank">https://gist.github.com/jayj/4012969</a>
+							<a href="https://gist.github.com/jayj/4012969" target="_blank">gist.github.com/jayj/4012969</a>
 						</p>
 					</section>
 				</section>
@@ -697,43 +697,7 @@
 		</div>
 		<script src="lib/js/jquery.min.js"></script>
 		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-		<script>
-			Reveal.initialize({
-				controls: false,
-				progress: true,
-				history: true,
-				center: true
-			});
-
-			Reveal.addEventListener("slidechanged", function(e){
-				// Get the current slide element
-				var currentSlide = Reveal.getCurrentSlide();
-				var currentSlideId = currentSlide.getAttribute("id");
-
-				// Get the previous slide element
-				var previousSlide = Reveal.getPreviousSlide();
-				var previousSlideId = previousSlide.getAttribute("id");
-
-				// Check if the current side has an ID
-				if(currentSlideId !== null){
-					var currentSlideById = $("section#" + currentSlideId);
-					var inactiveBin = currentSlideById.find("figure[data-jsbin]");
-					inactiveBin.after(jsbinSnippetGenerator(inactiveBin.data("src"), inactiveBin.data("height")));
-				}
-
-				// Check if the previous slide has an ID
-				if(previousSlideId !== null){
-					var previousSlideById = $("section#" + previousSlideId);
-					previousSlideById.find("iframe[data-jsbin]").fadeOut(250, function(){
-						previousSlideById.find("iframe[data-jsbin]").remove();
-					});
-				}
-			});
-
-			jsbinSnippetGenerator = function(frameSrc, frameHeight){
-				return "<iframe data-jsbin src=\"" + frameSrc + "\" style=\"height: " + frameHeight + "; width: 100%;\"></iframe>";
-			};
-		</script>
+		<script src="js/reveal.min.js"></script>
+		<script>Reveal.initialize({controls:!1,progress:!0,history:!0,center:!0}),Reveal.addEventListener("slidechanged",function(){var e=Reveal.getCurrentSlide(),i=e.getAttribute("id"),t=Reveal.getPreviousSlide(),n=t.getAttribute("id");if(null!==i){var a=$("section#"+i),r=a.find("figure[data-jsbin]");r.after(jsbinSnippetGenerator(r.data("src"),r.data("height")));}if(null!==n){var d=$("section#"+n);d.find("iframe[data-jsbin]").fadeOut(250,function(){d.find("iframe[data-jsbin]").remove();});}}),jsbinSnippetGenerator=function(e,i){return'<iframe data-jsbin src="'+e+'" style="height:'+i+';width:100%;"></iframe>'};</script>
 	</body>
 </html>
