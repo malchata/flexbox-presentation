@@ -28,13 +28,13 @@
 						[2.3] - Seemed Great at the Time
 						[2.4] - Tables Anyone?
 						[2.5] - Seemed Great at the Time
-				[3.0] - Box Model CSS
+				[3.0] - Box Model
 						[3.1] - Then Along Came CSS
 						[3.2] - What CSS Has Given Us
 						[3.3] - Box Model: The Foundation of All Elements
-						[3.4] - Box Model: The Source of All Headaches
-						[3.5] - Box Model Headaches: Floating Two Columns
-						[3.6] - Box Model Headaches: Equal Height Items
+						[3.4] - Box Layout: The Source of All Headaches
+						[3.5] - Box Layout Headaches: Floating Two Columns
+						[3.6] - Box Layout Headaches: Equal Height Items
 						[3.7] - Feeling Defeated?
 				[4.0] - Introductory Flexbox Slides
 						[4.1] - Introducing Flexbox
@@ -45,8 +45,8 @@
 						[4.6] - WIN
 				[5.0] - Flexbox in Action
 						[5.1] - Flexbox Mechanics
-						[5.2] - Beginning With Flexbox
-						[5.3] - Flexbox Defaults
+						[5.2] - Flexbox Defaults
+						[5.3] - Beginning With Flexbox
 				[6.0] - Properties for Parent Containers
 						[6.1] - Properties for Parent Containers
 						[6.2] - Flex Direction
@@ -75,7 +75,7 @@
 						[9.3] - Prefix Weirdness
 						[9.4] - LESS (or SASS) to the Rescue
 				[10.0] - In Conclusion
-						[10.1] - In Conclusion
+						[10.1] - To Recap
 						[10.2] - Resources
 						[10.3] - The End
 			-->
@@ -113,7 +113,10 @@
 					-->
 					<section>
 						<h2>Styling the Young Web</h2>
-						<img class="fragment" src="images/altavista.jpg" alt="Early AltaVista Design">
+						<div class="fragment">
+							<img src="images/altavista.jpg" alt="Early AltaVista Design">
+							<h4>Circa 1996</h4>
+						</div>
 					</section>
 					<!--
 						[2.3] - Seemed Great at the Time
@@ -132,10 +135,10 @@
 					-->
 					<section>
 						<h2>Tables, Anyone?</h2>
-						<h4 class="fragment">
-							<span class="normalCase">With a side of spacer GIFs, perhaps?</span>
-						</h4>
-						<img class="fragment" src="images/apple.com.jpg" alt="Table-based Apple Website">
+						<div class="fragment">
+							<img src="images/apple.com.jpg" alt="Table-based Apple Website">
+							<h4>Circa 1999</h4>
+						</div>
 					</section>
 					<!--
 						[2.5] - Seemed Great at the Time
@@ -151,7 +154,7 @@
 					</section>
 				</section>
 				<!--
-					[3.0] - Box Model CSS
+					[3.0] - Box Model
 				-->
 				<section data-background="rgba(44, 62, 80, 0.875)">
 					<!--
@@ -185,33 +188,33 @@
 						[3.3] - Box Model: The Foundation of All Elements
 					-->
 					<section>
-						<h2>Box Model</h2>
+						<h2>Box <b>Model</b></h2>
 						<h4>The Foundation of All Elements</h4>
 						<img class="fragment noRadius" src="images/box_model.png" alt="Box Model Diagram">
 					</section>
 					<!--
-						[3.4] - Box Model: The Source of All Headaches
+						[3.4] - Box Layout: The Source of All Headaches
 					-->
 					<section>
-						<h2>Box Model</h2>
+						<h2>Box <b>Layout</b></h2>
 						<h4>The Source of All Headaches</h4>
 						<img class="fragment desaturate" src="images/charlie_shut_up.gif" alt="Why Try?">
 					</section>
 					<!--
-						[3.5] - Box Model Headaches: Floating Two Columns
+						[3.5] - Box Layout Headaches: Floating Two Columns
 					-->
 					<section id="vwv43q">
-						<h3>Box Model Headaches</h3>
+						<h3>Box Layout Headaches</h3>
 						<h4>Floating Two Columns</h4>
 						<div>
 							<figure data-jsbin data-src="//localhost:3000/dih/1/embed?html,css,output" data-height="12em"></figure>
 						</div>
 					</section>
 					<!--
-						[3.6] - Box Model Headaches: Equal Height Items
+						[3.6] - Box Layout Headaches: Equal Height Items
 					-->
 					<section id="ceq322">
-						<h3>Box Model Headaches (Cont'd)</h3>
+						<h3>Box Layout Headaches (Cont'd)</h3>
 						<h4>Equal Height List Items</h4>
 						<div>
 							<figure data-jsbin data-src="//localhost:3000/buf/embed?html,css,output" data-height="12em"></figure>
@@ -318,7 +321,22 @@
 						<h4 class="fragment">Properties that apply to the container's <b>child items</b></h4>
 					</section>
 					<!--
-						[5.2] - Beginning With Flexbox
+						[5.2] - Flexbox Defaults
+					-->
+					<section>
+						<h3>Flex Layout Defaults</h3>
+						<h4>Items set to <code>display: flex;</code> do the following:</h4>
+						<ul class="centered">
+							<li class="fragment">Act like <code>block</code> layout items by clearing items and expanding to the width of the parent container.</li>
+							<li class="fragment"><b>Do not</b> allow their children to <b>wrap</b>.</li>
+							<li class="fragment">Align their children to the <b>top left</b> of the <b>parent container</b>.</li>
+							<li class="fragment"><b>Arrange</b> their children in <b>rows</b>.</li>
+							<li class="fragment">Appear in the <b>order defined</b> by the <b>markup</b>.</li>
+							<li class="fragment"><b>Stretch to fit</b> the height of the <b>parent container</b>.</li>
+						</ul>
+					</section>
+					<!--
+						[5.3] - Beginning With Flexbox
 					-->
 					<section id="hpfq2">
 						<h3>Starting With <b>Flex</b> Layout:</h3>
@@ -329,21 +347,6 @@
 						<p>
 							<b>Hint:</b> Use a <code>display</code> type of <code>inline-flex</code> if the parent container needs to behave similar to an <code>inline-block</code> element.
 						</p>
-					</section>
-					<!--
-						[5.3] - Flexbox Defaults
-					-->
-					<section>
-						<h3>Flex Layout Defaults</h3>
-						<h4>Items given a <code>display</code> type of <code>flex</code> do the following:</h4>
-						<ul class="centered">
-							<li class="fragment">Act like <code>block</code> layout items by clearing items and expanding to the width of the parent container.</li>
-							<li class="fragment"><b>Do not</b> allow their children to <b>wrap</b>.</li>
-							<li class="fragment">Align their children to the <b>top left</b> of the <b>parent container</b>.</li>
-							<li class="fragment"><b>Arrange</b> their children in <b>rows</b>.</li>
-							<li class="fragment">Appear in the <b>order defined</b> by the <b>markup</b>.</li>
-							<li class="fragment"><b>Stretch to fit</b> the height of the <b>parent container</b>.</li>
-						</ul>
 					</section>
 				</section>
 				<!--
@@ -648,7 +651,7 @@
 						<h3>LESS (or SASS) to the Rescue</h3>
 						<h4>Mixins for Your Sanity</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/kuq/embed?css,output" data-height="12em"></figure>
+							<figure data-jsbin data-src="//localhost:3000/viv/embed?css,output" data-height="12em"></figure>
 						</div>
 						<p>
 							From this gist:<br>
@@ -661,18 +664,28 @@
 				-->
 				<section>
 					<!--
-						[10.1] - In Conclusion
+						[10.1] - To Recap
 					-->
 					<section>
-						<h1>In Conclusion...</h1>
-						<img src="images/dennis_system.gif" alt="The D.E.N.N.I.S. System">
+						<h1>To Recap...</h1>
+						<h3 class="fragment">What Flexbox <b>Is</b></h3>
+						<ul class="centered">
+							<li class="fragment">A new CSS layout type for <b>aligning</b>, <b>rearranging</b> and <b>distributing</b> content.</li>
+							<li class="fragment">A <b>perfect replacement solution</b> for hacks using JavaScript.</li>
+							<li class="fragment">A well supported technology that is usable <b>today</b>.</li>
+							<li class="fragment">&nbsp;</li>
+						</ul>
+						<h3 class="fragment">What Flexbox <b>Is Not</b></h3>
+						<ul class="centered">
+							<li class="fragment">A replacement for all other layout mechanisms.</li>
+						</ul>
 					</section>
 					<!--
 						[10.2] - Resources
 					-->
 					<section>
 						<h2>Resources</h2>
-						<ul>
+						<ul class="centered">
 							<li>
 								A Complete Gude to Flexbox:<br>
 								<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">css-tricks.com/snippets/css/a-guide-to-flexbox/</a>
@@ -690,6 +703,10 @@
 								<a href="http://caniuse.com/#search=flexbox" target="_blank">caniuse.com/#search=flexbox</a>
 							</li>
 							<li>
+								reveal.js (Used to create this presentation):<br>
+								<a href="http://lab.hakim.se/reveal-js" target="_blank">lab.hakim.se/reveal-js</a>
+							</li>
+							<li>
 								JSBin (Used for fiddles):<br>
 								<a href="https://github.com/jsbin/jsbin" target="_blank">github.com/jsbin/jsbin</a>
 							</li>
@@ -699,7 +716,7 @@
 						[10.3] - The End
 					-->
 					<section>
-						<h2><b>The End</b></h2>
+						<h1><b>The End</b></h1>
 						<h4>Thank You!</h4>
 						<img src="images/day_man.gif" alt="Day Man: Fighter of The Night Man!">
 					</section>
@@ -709,6 +726,6 @@
 		<script src="lib/js/jquery.min.js"></script>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-		<script>Reveal.initialize({controls:!1,progress:!0,history:!0,center:!0}),Reveal.addEventListener("slidechanged",function(){var e=Reveal.getCurrentSlide(),i=e.getAttribute("id"),t=Reveal.getPreviousSlide(),n=t.getAttribute("id");if(null!==i){var a=$("section#"+i),r=a.find("figure[data-jsbin]");r.after(jsbinSnippetGenerator(r.data("src"),r.data("height")));}if(null!==n){var d=$("section#"+n);d.find("iframe[data-jsbin]").fadeOut(250,function(){d.find("iframe[data-jsbin]").remove();});}}),jsbinSnippetGenerator=function(e,i){return'<iframe data-jsbin src="'+e+'" style="height:'+i+';width:100%;"></iframe>'};</script>
+		<script>Reveal.initialize({controls:!1,progress:!1,history:!0,center:!0}),Reveal.addEventListener("slidechanged",function(){var e=Reveal.getCurrentSlide(),i=e.getAttribute("id"),t=Reveal.getPreviousSlide(),n=t.getAttribute("id");if(null!==i){var a=$("section#"+i),r=a.find("figure[data-jsbin]");r.after(jsbinSnippetGenerator(r.data("src"),r.data("height")));}if(null!==n){var d=$("section#"+n);d.find("iframe[data-jsbin]").fadeOut(250,function(){d.find("iframe[data-jsbin]").remove();});}}),jsbinSnippetGenerator=function(e,i){return'<iframe data-jsbin src="'+e+'" style="height:'+i+';width:100%;"></iframe>'};</script>
 	</body>
 </html>

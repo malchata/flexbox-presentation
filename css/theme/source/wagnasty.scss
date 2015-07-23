@@ -5,10 +5,8 @@
 // Default mixins and settings -----------------
 @import "../template/mixins";
 @import "../template/settings";
+@import "../template/fonts";
 // ---------------------------------------------
-
-// Include theme-specific fonts
-@import url("//fonts.googleapis.com/css?family=Quicksand:400,700");
 
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: #2980b9;
@@ -20,8 +18,8 @@ $accentColor: #e74c3c;
 $accentColor2: #2c3e50;
 
 $mainFontSize: 38px;
-$mainFont: "Quicksand", sans-serif;
-$headingFont: "Quicksand", sans-serif;
+$mainFont: "quicksandregular", sans-serif;
+$headingFont: "quicksandregular", sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
@@ -299,4 +297,11 @@ ul.centered li
 {
 	text-align: center;
 	margin: 0 0 0.375em 0;
+}
+
+b,
+strong
+{
+	font-family: "quicksandbold";
+	font-weight: 700;
 }

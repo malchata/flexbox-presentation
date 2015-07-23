@@ -7,7 +7,7 @@ module.exports = function(grunt){
 	var taskConfig = {
 		pkg: grunt.file.readJSON("package.json"),
 		watch:{
-			files: ["index.html", "css/theme/source/wagnasty.scss"],
+			files: ["index.html", "css/theme/**/*.scss"],
 			tasks: ["sass"],
 			options:{
 				livereload: true
