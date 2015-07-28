@@ -1,0 +1,10 @@
+{
+	"env": "development",
+	"url": {
+		"host": "localhost:3000",
+		"prefix": "/"
+	},
+	"session": {
+		"secret": "masterOfKarateAndFriendshipForEveryone"
+	}
+}
