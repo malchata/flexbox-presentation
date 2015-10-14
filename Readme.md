@@ -57,4 +57,6 @@ This presentation was given on the following dates:
 
 ##Future Events
 
-None scheduled yet. Aiming to submit this talk for the Fall 2015 Twin Cities Code Camp.
+This presentation will be given on the following dates:
+
+- **10/24/2015**: [Twin Cities Code Camp 19](http://tccc19.eventbrite.com/)
