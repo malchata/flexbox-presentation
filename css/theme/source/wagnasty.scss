@@ -305,3 +305,15 @@ strong
 	font-family: "quicksandbold";
 	font-weight: 700;
 }
+
+.reveal pre
+{
+	box-shadow: none;
+}
+
+.reveal pre code
+{
+	padding: 0.375em !important;
+	border-radius: 0.375em;
+	font-size: 0.75em;
+}

@@ -74,6 +74,8 @@
 						[9.2] - Browsers in Need of Prefixing
 						[9.3] - Prefix Weirdness
 						[9.4] - LESS (or SASS) to the Rescue
+						[9.5] - Automated Prefixing With PostCSS (package.json)
+						[9.6] - Automated Prefixing With PostCSS (Gruntfile.js)
 				[10.0] - In Conclusion
 						[10.1] - To Recap
 						[10.2] - Resources
@@ -658,6 +660,78 @@
 							<a href="https://gist.github.com/jayj/4012969" target="_blank">gist.github.com/jayj/4012969</a>
 						</p>
 					</section>
+					<!--
+						[9.5] - Automated Prefixing With PostCSS (package.json)
+					-->
+					<section>
+						<h3>Automated Prefixing with <code>postcss</code></h3>
+						<h4><code>package.json</code></h4>
+						<pre>
+							<code class="javascript" data-trim spellcheck="false">
+{
+	"name": "kitten-mittens",
+	"version": "0.1.0",
+	"description": "ARE YOUR CATS DRIVING YOU CRAZY????",
+	"main": "Gruntfile.js",
+	"dependencies": {
+		"grunt": "0.4.5",
+		"grunt-contrib-watch": "0.6.1",
+		"grunt-postcss": "~0.6.0",
+		"autoprefixer": "~6.0.3"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	}
+}
+							</code>
+						</pre>
+					</section>
+					<!--
+						[9.6] - Automated Prefixing With PostCSS (Gruntfile.js)
+					-->
+					<section>
+						<h3>Automated Prefixing with <code>postcss</code></h3>
+						<h4><code>Gruntfile.js</code></h4>
+						<pre>
+							<code class="javascript" data-trim spellcheck="false">
+module.exports = function(grunt){
+	grunt.loadNpmTasks("grunt-contrib-watch");
+	grunt.loadNpmTasks("grunt-postcss");;
+
+	// Task Configuration
+	var taskConfig = {
+		pkg: grunt.file.readJSON("package.json"),
+		watch: {
+			options: {
+				livereload: true,
+				livereloadOnError: false,
+				reload: true
+			},
+			files: ["css/styles.css"],
+			tasks: ["postcss:dist"]
+		},
+		postcss: {
+			options: {
+				map: false,
+				processors: [
+					require("autoprefixer")({
+						browsers: ["last 3 versions"]
+					})
+				]
+			},
+			dist: {
+				src: "css/processed.css"
+			}
+		}
+	};
+
+	// Initialize configuration and register tasks
+	grunt.initConfig(taskConfig);
+	grunt.registerTask("default", ["postcss:dist", "watch"]);
+};
+							</code>
+						</pre>
+					</section>
 				</section>
 				<!--
 					[10.0] - In Conclusion
@@ -726,6 +800,6 @@
 		<script src="lib/js/jquery.min.js"></script>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-		<script>Reveal.initialize({controls:!1,progress:!1,history:!0,center:!0}),Reveal.addEventListener("slidechanged",function(){var e=Reveal.getCurrentSlide(),i=e.getAttribute("id"),t=Reveal.getPreviousSlide(),n=t.getAttribute("id");if(null!==i){var a=$("section#"+i),r=a.find("figure[data-jsbin]");r.after(jsbinSnippetGenerator(r.data("src"),r.data("height")));}if(null!==n){var d=$("section#"+n);d.find("iframe[data-jsbin]").fadeOut(250,function(){d.find("iframe[data-jsbin]").remove();});}}),jsbinSnippetGenerator=function(e,i){return'<iframe data-jsbin src="'+e+'" style="height:'+i+';width:100%;"></iframe>'};</script>
+		<script>Reveal.initialize({controls:!1,progress:!1,history:!0,center:!0,dependencies:[{src:"plugin/highlight/highlight.js",async:!0,condition:function(){return!!document.querySelector("pre code")},callback:function(){hljs.initHighlightingOnLoad()}}]}),Reveal.addEventListener("slidechanged",function(){var e=Reveal.getCurrentSlide(),i=e.getAttribute("id"),t=Reveal.getPreviousSlide(),n=t.getAttribute("id");if(null!==i){var r=$("section#"+i),a=r.find("figure[data-jsbin]");a.after(jsbinSnippetGenerator(a.data("src"),a.data("height")))}if(null!==n){var d=$("section#"+n);d.find("iframe[data-jsbin]").fadeOut(250,function(){d.find("iframe[data-jsbin]").remove()})}}),jsbinSnippetGenerator=function(e,i){return'<iframe data-jsbin src="'+e+'" style="height:'+i+';width:100%;"></iframe>'};</script>
 	</body>
 </html>
