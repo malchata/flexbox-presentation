@@ -66,7 +66,7 @@ cp ../jsbin.sqlite .
 sudo bin/jsbin
 ```
 
-Everything should work after that, at least on Mac OS. At that point you will need to configure the talk to run on a local web server.
+Everything should work after that, at least on OSX. At that point you will need to configure the talk to run on a local web server. Unfortunately, the talk will not work when run from the local file system because of iframe securiy policies. The talk also needs to run on the hostname `flexbox.frontlineui.com` if you want the images in the `jsbin` fiddles to show up. If that's unimportant to you, use whatever local hostname you prefer.
 
 Windows users will likely need to install Python, which node requires to build some `jsbin` dependencies. To get this talk to work on Windows, I installed version 2.7.10, which you can [grab here](https://www.python.org/downloads/release/python-2710). Do *not* install a 3.x version of Python, as it will not work!
 
@@ -74,6 +74,8 @@ Why is it this complex and involved? Two reasons:
 
 1. I needlessly complicate everything, first and foremost.
 2. I needed to ensure that this talk would run entirely offline.
+
+If you're having significant trouble trying to get this to work locally, create an issue in this repo with as much information as you have (terminal input is really important!) and I'll help to the best of my ability.
 
 ##Talk Events
 
