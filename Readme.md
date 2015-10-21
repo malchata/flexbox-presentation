@@ -31,21 +31,49 @@ The talk proceeds as follows:
 
 ##Running This Talk Locally
 
-Just clone this repo into a directory and run it under any hostname you'd like. Just make sure that you run it in a web server context, because the iframes may not work properly due to security constraints if you run this talk in the file system context.
+Getting this to run locally has been somewhat of a pain for users who have attempted it. The reason for this can be due to various reasons, but the top two reasons are either because Windows users have to grapple with Python, and the `jsbin` package used for the offline fiddles is very particular about which version of node you use. I used the `n` package to overcome compatibility issues. `n` allows you to switch between specific versions of node, which is crucial for getting this to work.
 
-Since a local copy of [jsbin](https://github.com/jsbin/jsbin) is used, there's more to viewing this project than simply cloning the repo and running it in your web browser. You'll need to traverse into the `jsbin` directory in the project and perform some shell commands:
+In order to install and run this talk, you'll need `npm` and `git` installed on your system. The steps below are done on a Mac, so they should work for Unix and Unix-like systems:
 
+###1. Clone this repo into a directory of your choice
 ```
-npm install -g grunt-cli
-npm install
-bin/jsbin
+git clone https://github.com/malchata/flexbox-presentation.git .
 ```
 
-*Note: This is currently buggy, and I'm working on fixing this issue.*
+###2. Clone the `v3.35.2` version of `jsbin` from git into the presentation directory:
+```
+git clone https://github.com/jsbin/jsbin.git ./jsbin
+cd jsbin
+git checkout tags/v3.35.2
+```
 
-This will run the jsbin server on `localhost:3000`, so make sure that host and port combination is cleared for use. The talk embeds iframes to fiddles relevant to the presentation. If you run the presentation without it, all fiddle embeds will appear broken.
+###3. Install the `n` package and switch to the `0.10.38` version of Node.
+```
+sudo npm install -g n
+sudo n 0.10.38
+```
 
-I'm not immediately sure of all the dependencies, but I know that Windows users will have to install Python. The version of Python you install is important, since a node dependency for jsbin seems to prefer Python 3.0 or less. Since OSX comes with Python out of the box, I had very little in the way of difficulties. I suspect *nix users will have an easier go of it than Windows users.
+###4. Install the node modules for `jsbin`
+```
+cd jsbin
+sudo npm install
+```
+
+###5. Copy the configuration and SQLite database from the parent directory into the `jsbin` directory and run jsbin:
+```
+cp ../config.local.json .
+cp ../jsbin.sqlite .
+sudo bin/jsbin
+```
+
+Everything should work after that, at least on Mac OS. At that point you will need to configure the talk to run on a local web server.
+
+Windows users will likely need to install Python, which node requires to build some `jsbin` dependencies. To get this talk to work on Windows, I installed version 2.7.10, which you can [grab here](https://www.python.org/downloads/release/python-2710). Do *not* install a 3.x version of Python, as it will not work!
+
+Why is it this complex and involved? Two reasons:
+
+1. I needlessly complicate everything, first and foremost.
+2. I needed to ensure that this talk would run entirely offline.
 
 ##Talk Events
 
