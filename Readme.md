@@ -81,12 +81,11 @@ If you're having significant trouble trying to get this to work locally, create 
 
 This presentation was given on the following dates:
 
-- **07/24/2015**: General Mills Code Camp v5.0.
+- **07/24/2015**: General Mills Code Camp v5.0
+- **10/24/2015**: [Twin Cities Code Camp 19](http://www.twincitiescodecamp.com)
 
 ---
 
 ##Future Events
 
-This presentation will be given on the following dates:
-
-- **10/24/2015**: [Twin Cities Code Camp 19](http://tccc19.eventbrite.com/)
+This talk is currently not scheduled for any future dates. If you'd like me to give this talk at your conference, just [email me](mailto:jeremy.l.wagner@gmail.com) or [DM me on twitter](https://twitter.com/malchata).
