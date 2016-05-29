@@ -68,6 +68,21 @@ hr
 	opacity: 0.5;
 }
 
+.embiggen{
+	width: 65%;
+	height: auto;
+}
+
+.blink{
+	animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker{
+	50%{
+		opacity: 0;
+	}
+}
+
 h1.ribbon
 {
 	position: relative;
@@ -225,6 +240,12 @@ img.round
 	margin: 0 auto;
 	border: 0 !important;
 	border-radius: 50%;
+}
+
+img.titleCard{
+	display: block;
+	clear: both;
+	margin: 0 auto .75em !important;
 }
 
 img.noRadius

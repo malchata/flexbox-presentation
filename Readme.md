@@ -88,4 +88,4 @@ This presentation was given on the following dates:
 
 ##Future Events
 
-This talk is currently not scheduled for any future dates. If you'd like me to give this talk at your conference, just [email me](mailto:jeremy.l.wagner@gmail.com) or [DM me on twitter](https://twitter.com/malchata).
+- **06/09/2016**: [Open Source North](http://opensourcenorth.com)
