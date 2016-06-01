@@ -35,7 +35,7 @@
 						[3.4] - Box Layout: The Source of All Nightmares
 						[3.5] - Box Layout Headaches: Floating Two Columns
 						[3.6] - Box Layout Headaches: Equal Height Items
-						[3.7] - Feeling Defeated?
+						[3.7] - Feel Like Giving Up?
 				[4.0] - Introductory Flexbox Slides
 						[4.1] - Introducing Flexbox
 						[4.2] - The Layout Modes
@@ -66,22 +66,22 @@
 						[8.3] - Equal Height Galleries
 						[8.4] - Scrollable Equal Height Galleries
 						[8.5] - Easy Proportional Tabs
-						[8.6] - Full Page Accordions
-						[8.7] - Cool Image Galleries
-				[9.0] - Vendor Prefixes
-						[9.1] - BEWARE!
-						[9.2] - Browsers in Need of Prefixing
-						[9.3] - Prefix Weirdness
-						[9.4] - LESS (or SASS) to the Rescue
-						[9.5] - Automated Prefixing With PostCSS (package.json)
-						[9.6] - Automated Prefixing With PostCSS (Gruntfile.js)
-				[10.0] - In Conclusion
-						[10.1] - To Recap
-						[10.2] - Resources
-						[10.3] - The End
-				[11.0] - Book Stuff
-						[11.1] - BUY MY BOOK!
-						[11.2] - Book Cover
+						[8.6] - Cool Image Galleries
+				[9.0] - Performance
+						[9.0] - Notes on Performance
+				[10.0] - Vendor Prefixes
+						[10.1] - BEWARE!
+						[10.2] - Browsers in Need of Prefixing
+						[10.3] - Prefix Weirdness
+						[10.4] - LESS (or SASS) to the Rescue
+						[10.5] - Automated Prefixing With PostCSS (package.json)
+						[10.6] - Automated Prefixing With PostCSS (Gruntfile.js)
+				[11.0] - In Conclusion
+						[11.1] - To Recap
+						[11.2] - Resources
+						[11.3] - The End
+				[12.0] - Book Stuff
+						[12.1] - Web Optimization in Action
 			-->
 			<div class="slides">
 				<!--
@@ -225,10 +225,10 @@
 						</div>
 					</section>
 					<!--
-						[3.7] - Feeling Defeated?
+						[3.7] - Feel Like Giving Up?
 					-->
 					<section>
-						<h2>Feeling Defeated?</h2>
+						<h2>Feel Like Giving Up?</h2>
 						<img src="images/watch_tv.gif" alt="I'm going to go do something productive. I'm going to watch television.">
 					</section>
 				</section>
@@ -283,6 +283,7 @@
 							<li class="fragment">Can be laid out on a singular axis or wrapped onto multiple lines.</li>
 							<li class="fragment">Can <b>flex</b> sizes to <b>respond</b> to available space.</li>
 							<li class="fragment">Can be aligned with respect to the parent container or each other.</li>
+							<li class="fragment">Performs <b><i>better</i></b> than traditional layout mechanisms.</li>
 						</ul>
 					</section>
 					<!--
@@ -578,17 +579,7 @@
 						</div>
 					</section>
 					<!--
-						[8.6] - Full Page Accordions
-					-->
-					<section id="avq3g90h">
-						<h3>Full Page Accordions*</h3>
-						<div>
-							<figure data-jsbin data-src="//localhost:3000/zan/embed?css,output" data-height="14em"></figure>
-						</div>
-						<p>*Uses viewport units, which may not have widespread support.</p>
-					</section>
-					<!--
-						[8.7] - Cool Image Galleries
+						[8.6] - Cool Image Galleries
 					-->
 					<section id="ibuae">
 						<h3>Cool Image Galleries</h3>
@@ -598,18 +589,29 @@
 					</section>
 				</section>
 				<!--
-					[9.0] - Vendor Prefixes
+					[9.0] - Notes on Performance
 				-->
 				<section>
 					<!--
-						[9.1] - BEWARE!
+						[9.1] - Notes on Performance
+					-->
+					<section>
+						<h1>Notes on Performance</h1>
+					</section>
+				</section>
+				<!--
+					[10.0] - Vendor Prefixes
+				-->
+				<section>
+					<!--
+						[10.1] - BEWARE!
 					-->
 					<section>
 						<h1><b>Beware!</b></h1>
 						<h2>Vendor Prefixes Ahead</h2>
 					</section>
 					<!--
-						[9.2] - Browsers in Need of Prefixing
+						[10.2] - Browsers in Need of Prefixing
 					-->
 					<section>
 						<h3>Browsers In Need of Prefixing</h3>
@@ -621,7 +623,7 @@
 						</ul>
 					</section>
 					<!--
-						[9.3] - Prefix Weirdness
+						[10.3] - Prefix Weirdness
 					-->
 					<section>
 						<h3>Inconsistent Vendor Prefixes</h3>
@@ -637,7 +639,7 @@
 						</code>
 					</section>
 					<!--
-						[9.4] - LESS (or SASS) to the Rescue
+						[10.4] - LESS (or SASS) to the Rescue
 					-->
 					<section id="h98evh97">
 						<h3>LESS (or SASS) to the Rescue</h3>
@@ -651,7 +653,7 @@
 						</p>
 					</section>
 					<!--
-						[9.5] - Automated Prefixing With PostCSS (package.json)
+						[10.5] - Automated Prefixing With PostCSS (package.json)
 					-->
 					<section>
 						<h3>Automated Prefixing with <code>postcss</code></h3>
@@ -677,7 +679,7 @@
 						</pre>
 					</section>
 					<!--
-						[9.6] - Automated Prefixing With PostCSS (Gruntfile.js)
+						[10.6] - Automated Prefixing With PostCSS (Gruntfile.js)
 					-->
 					<section>
 						<h3>Automated Prefixing with <code>postcss</code></h3>
@@ -724,11 +726,11 @@ module.exports = function(grunt){
 					</section>
 				</section>
 				<!--
-					[10.0] - In Conclusion
+					[11.0] - In Conclusion
 				-->
 				<section>
 					<!--
-						[10.1] - To Recap
+						[11.1] - To Recap
 					-->
 					<section>
 						<h1>To Recap...</h1>
@@ -745,7 +747,7 @@ module.exports = function(grunt){
 						</ul>
 					</section>
 					<!--
-						[10.2] - Resources
+						[11.2] - Resources
 					-->
 					<section>
 						<h2>Resources</h2>
@@ -780,25 +782,29 @@ module.exports = function(grunt){
 						</ul>
 					</section>
 					<!--
-						[10.3] - The End
+						[11.3] - The End
 					-->
 					<section>
 						<h1><b>The End</b></h1>
 						<h4>Thank You!</h4>
-						<img src="images/day_man.gif" alt="Day Man: Fighter of The Night Man!">
+						<img src="images/sardine.jpg" alt="Sardine?">
 					</section>
 				</section>
 				<!--
-					[11.0] - Book Stuff
+					[12.0] - Book Stuff
 				-->
 				<section>
 					<!--
-						[11.1] - BUY MY BOOK!
+						[12.1] - Web Optimization in Action
 					-->
 					<section>
-						<h1 class="blink">Buy My Book!</h1>
-						<img class="embiggen" src="images/buy_my_book.gif" alt="Buy my book! Buy my book! BUY MY BOOK!">
-						<h1 class="blink">Buy My Book!</h1>
+						<h2>Web Optimization in Action</h2>
+						<img class="noRadius" src="images/webopt.jpg" alt="Web Optimization in Action">
+						<h3>
+							<b><a href="https://jeremywagner.me/book" target="_blank">jeremywagner.me/book</a></b>
+						</h3>
+						<h3>39% off with code <code><u><b>ctwosnorth</b></u></code></h3>
+						<h4>Code is for <u>all</u> Manning Books!</h4>
 					</section>
 				</section>
 			</div>
