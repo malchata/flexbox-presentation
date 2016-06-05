@@ -1,8 +1,8 @@
-#The Flexbox Cometh
-##Champion of The Layout
+#A Flexbox Primer
+##(For the Unprimed)
 ####by Jeremy Wagner ([@malchata](http://twitter.com/malchata))
 
-#####Presented using [reveal.js](http://lab.hakim.se/reveal-js)
+#####Written using [reveal.js](http://lab.hakim.se/reveal-js)
 ---
 
 ##Overview
@@ -24,12 +24,14 @@ The talk proceeds as follows:
 5. Properties used for parent containers.
 6. Properties used for child items.
 7. Some practical examples of flexbox in use.
-8. A short caveat on vendor prefixes, including some useful LESS mixins.
-9. A conclusion with some helpful links/resources.
+9. Some brief notes on Flexbox performance.
+10. A short caveat on vendor prefixes, including some useful LESS mixins.
+11. A conclusion with some helpful links/resources.
 
 ---
 
 ##Running This Talk Locally
+###tl;dr: Don't bother unless you like pain.
 
 Getting this to run locally has been somewhat of a pain for users who have attempted it. The reason for this can be due to various reasons, but the top two reasons are either because Windows users have to grapple with Python, and the `jsbin` package used for the offline fiddles is very particular about which version of node you use. I used the `n` package to overcome compatibility issues. `n` allows you to switch between specific versions of node, which is crucial for getting this to work.
 

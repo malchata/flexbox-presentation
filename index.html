@@ -68,7 +68,10 @@
 						[8.5] - Easy Proportional Tabs
 						[8.6] - Cool Image Galleries
 				[9.0] - Performance
-						[9.0] - Notes on Performance
+						[9.1] - Performance Tests
+						[9.2] - Test #1
+						[9.3] - Test #2
+						[9.4] - Test #3
 				[10.0] - Vendor Prefixes
 						[10.1] - BEWARE!
 						[10.2] - Browsers in Need of Prefixing
@@ -593,10 +596,54 @@
 				-->
 				<section>
 					<!--
-						[9.1] - Notes on Performance
+						[9.1] - Performance Tests
 					-->
 					<section>
-						<h1>Notes on Performance</h1>
+						<h1>Performance Tests</h1>
+						<h3>
+							<p class="fragment">Google Chrome using Timeline Profiler</p>
+							<p class="fragment">Figures are an average of ten tests</p>
+							<p class="fragment">MacBook Pro with Retina Screen</p>
+						</h3>
+					</section>
+					<!--
+						[9.2] - Test #1
+					-->
+					<section>
+						<h2><b>Test #1</b></h1>
+						<h3>Boxes wrapped onto two lines</h2>
+						<img class="noRadius" src="images/flex_test_1.png" alt="Flexbox Test #1">
+						<h4>
+							CPU Time (Rendering + Painting):<br>
+							Traditional: <u>15.07 ms</u> | Flexbox: <u>14.02 ms</u>
+						</h4>
+						<h3>~7% faster</h3>
+					</section>
+					<!--
+						[9.3] - Test #2
+					-->
+					<section>
+						<h2><b>Test #2</b></h1>
+						<h3>Simple two column layout with content galleries</h2>
+						<img class="noRadius" src="images/flex_test_2.png" alt="Flexbox Test #2">
+						<h4>
+							CPU Time (Rendering + Painting):<br>
+							Traditional: <u>18.69 ms</u> | Flexbox: <u>16.62 ms</u>
+						</h4>
+						<h3>~11% faster</h3>
+					</section>
+					<!--
+						[9.4] - Test #3
+					-->
+					<section>
+						<h2><b>Test #3</b></h1>
+						<h3>Stress Test</h2>
+						<img class="noRadius smaller" src="images/stresstest.gif" alt="Flexbox Test #3">
+						<h4>
+							CPU Time (Rendering + Painting):<br>
+							Traditional: <u>10.22 s</u> | Flexbox: <u>2.63 s</u>
+						</h4>
+						<h3>~74% faster</h3>
 					</section>
 				</section>
 				<!--
