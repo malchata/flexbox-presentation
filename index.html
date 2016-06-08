@@ -38,8 +38,8 @@
 						[3.7] - Feel Like Giving Up?
 				[4.0] - Introductory Flexbox Slides
 						[4.1] - Introducing Flexbox
-						[4.2] - The Layout Modes
-						[4.3] - A New Layout Mode
+						[4.2] - The Established Display Types
+						[4.3] - A New Display Type Mode
 						[4.4] - Sounds Great, But...
 						[4.5] - Turns Out...
 						[4.6] - WIN
@@ -214,7 +214,7 @@
 						<h3>Box Layout Headaches</h3>
 						<h4>Floating Two Columns</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/dih/1/embed?html,css,output" data-height="12em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/dih/1/embed?html,css,output" data-height="12em"></figure>
 						</div>
 					</section>
 					<!--
@@ -224,7 +224,7 @@
 						<h3>Box Layout Headaches (Cont'd)</h3>
 						<h4>Equal Height List Items</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/muk/embed?html,css,output" data-height="12em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/muk/embed?html,css,output" data-height="12em"></figure>
 						</div>
 					</section>
 					<!--
@@ -245,48 +245,40 @@
 					<section>
 						<h3>Introducing</h3>
 						<h1 class="ribbon" style="margin-bottom: 0.5em;"><span>Flexbox</span></h1>
-						<h4>
-							A master of layout and<br>
-							flexibility for everyone.
-						</h4>
 					</section>
 					<!--
-						[4.2] - The Layout Modes
+						[4.2] - The Established Display Types
 					-->
 					<section>
-						<h2>The Layout Modes</h2>
+						<h2>The Established Display Types</h2>
 						<ul class="centered">
 							<li class="fragment">
-								<b>block</b> layout<br>
-								 for laying out documents.
+								<code>block</code>
 							</li>
 							<li class="fragment">
-								<b>inline</b> layout<br>
-								for laying out text.
+								<code>inline</code>
 							</li>
 							<li class="fragment">
-								<b>table</b> layout<br>
-								for laying out tabular data.
+								<code>inline-block</code>
 							</li>
 							<li class="fragment">
-								<b>positioned</b> layout<br>
-								for laying out items outside of the structured flow.
+								The <code>position</code> property
 							</li>
 						</ul>
 					</section>
 					<!--
-						[4.3] - A New Layout Mode
+						[4.3] - A New Display Type Mode
 					-->
 					<section>
-						<h2>A New Layout Mode:</h2>
-						<h3><b>Flex</b> Layout</h3>
+						<h2>A Display Type:</h2>
+						<h3><code>flex</code></h3>
 						<ul class="centered">
 							<li class="fragment">Can be laid out in <b>any</b> direction.</li>
 							<li class="fragment">Can have their display orders <b>reversed</b> or <b>rearranged</b>.</li>
 							<li class="fragment">Can be laid out on a singular axis or wrapped onto multiple lines.</li>
 							<li class="fragment">Can <b>flex</b> sizes to <b>respond</b> to available space.</li>
-							<li class="fragment">Can be aligned with respect to the parent container or each other.</li>
-							<li class="fragment">Performs <b><i>better</i></b> than traditional layout mechanisms.</li>
+							<li class="fragment">Can be aligned in ways that used to require CSS hacks or JavaScript.</li>
+							<li class="fragment">Performs <b>better</b> (usually) than traditional layout mechanisms.</li>
 						</ul>
 					</section>
 					<!--
@@ -333,7 +325,7 @@
 					-->
 					<section>
 						<h3>Flex Layout Defaults</h3>
-						<h4>Items set to <code>display: flex;</code> do the following:</h4>
+						<h4>By default, elements with <code>display: flex;</code> applied do the following:</h4>
 						<ul class="centered">
 							<li class="fragment">Act like <code>block</code> layout items by clearing items and expanding to the width of the parent container.</li>
 							<li class="fragment"><b>Do not</b> allow their children to <b>wrap</b>.</li>
@@ -350,7 +342,7 @@
 						<h3>Starting With <b>Flex</b> Layout:</h3>
 						<h4>Just add <code>display: flex;</code> to a parent container.</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/pov/embed?html,css,output" data-height="11em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/pov/embed?html,css,output" data-height="11em"></figure>
 						</div>
 						<p>
 							<b>Hint:</b> Use a <code>display</code> type of <code>inline-flex</code> if the parent container needs to behave similar to an <code>inline-block</code> element.
@@ -375,9 +367,9 @@
 					-->
 					<section id="qwefc">
 						<h3>Flex Direction</h3>
-						<h4>Use <code>flex-direction</code></h4>
+						<h4>Use <code>flex-direction</code> to set the orientation of the main axis.</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/haq/embed?html,css,output" data-height="10em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/haq/embed?html,css,output" data-height="10em"></figure>
 						</div>
 						<p>
 							<b>Valid values:</b><br>
@@ -390,9 +382,9 @@
 					-->
 					<section id="f23f">
 						<h3>Wrapping Flex Items</h3>
-						<h4>Use <code>flex-wrap</code> to affect child item wrapping.</h4>
+						<h4>Use <code>flex-wrap</code> to affect how flex items wrap.</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/hil/embed?css,output" data-height="12em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/hil/embed?css,output" data-height="12em"></figure>
 						</div>
 						<p>
 							<b>Valid values:</b><br>
@@ -404,9 +396,9 @@
 					-->
 					<section id="opher">
 						<h3>Distributing Flex Items</h3>
-						<h4>Use <code>justify-content</code> to distribute child items.</h4>
+						<h4>Use <code>justify-content</code> to align flex items across the main axis.</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/cav/embed?css,output" data-height="11em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/cav/embed?css,output" data-height="11em"></figure>
 						</div>
 						<p>
 							<b>Valid values:</b><br>
@@ -419,9 +411,9 @@
 					-->
 					<section id="arv33">
 						<h3>Aligning Flex Items</h3>
-						<h4>Use <code>align-items</code> to align items on a horizontal axis.</h4>
+						<h4>Use <code>align-items</code> to align flex items along the cross axis.</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/nip/embed?css,output" data-height="11em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/nip/embed?css,output" data-height="11em"></figure>
 						</div>
 						<p>
 							<b>Valid values:</b><br>
@@ -434,10 +426,9 @@
 					-->
 					<section id="ahq34g">
 						<h3>Aligning Flex Items (Cont'd)</h3>
-						<h4>Use <code>align-content</code> to vertically distribute items.</h4>
-						<p>(Only effective on certain scenarios.)</p>
+						<h4>Use <code>align-content</code> to distribute flex items across the cross axis.</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/coj/embed?css,output" data-height="10em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/coj/embed?css,output" data-height="10em"></figure>
 						</div>
 						<p>
 							<b>Valid values:</b><br>
@@ -464,10 +455,9 @@
 					-->
 					<section id="vas44">
 						<h3>Aligning Individual Items</h3>
-						<h4>Use <code>align-self</code> to align individual items.</h4>
-						<p>(May not work in some scenarios.)</p>
+						<h4>Use <code>align-self</code> to align individual items along the cross axis.</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/naj/embed?css,output" data-height="10em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/suh/embed?css,output" data-height="10em"></figure>
 						</div>
 						<p>
 							<b>Valid values:</b><br>
@@ -481,7 +471,7 @@
 						<h3>Changing Item Order</h3>
 						<h4>Use <code>order</code> to rearrange elements in a flex container.</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/mif/embed?css,output" data-height="10em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/mif/embed?css,output" data-height="10em"></figure>
 						</div>
 						<p>
 							<b>Valid values:</b><br>
@@ -496,7 +486,7 @@
 						<h4>Use <code>flex-basis</code> to set an item's default width.</h4>
 						<p>(In flex column layouts, this sets an item's default height.)</p>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/rif/embed?css,output" data-height="10em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/rif/embed?css,output" data-height="10em"></figure>
 						</div>
 						<p>
 							<b>Valid values:</b><br>
@@ -510,7 +500,7 @@
 						<h3>Growing Flex Items</h3>
 						<h4>Use <code>flex-grow</code> to proportionally size specific flex items.</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/jov/embed?css,output" data-height="10em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/jov/embed?css,output" data-height="10em"></figure>
 						</div>
 						<p>
 							<b>Valid values:</b><br>
@@ -527,7 +517,7 @@
 						</h3>
 						<h4>Use <code>flex-shrink</code> to set a flex item's minimum threshold.</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/tiq/embed?css,output" data-height="10em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/tiq/embed?css,output" data-height="10em"></figure>
 						</div>
 					</section>
 				</section>
@@ -551,7 +541,7 @@
 					<section id="v22fw">
 						<h3>Easy Site Headers</h3>
 						<h4><code>justify-content</code> makes perfectly organized navs a snap.</h4>
-						<figure data-jsbin data-src="//localhost:3000/juk/embed?html,css,output" data-height="13em"></figure>
+						<figure data-jsbin data-src="http://localhost:3000/juk/embed?html,css,output" data-height="13em"></figure>
 						<p>No <code>float</code>ing, no <code>clear</code>ing, no bull.</p>
 					</section>
 					<!--
@@ -560,7 +550,7 @@
 					<section id="v3q4vq">
 						<h3>Equal Height Content Galleries</h3>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/xux/embed?css,output" data-height="13em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/xux/embed?css,output" data-height="13em"></figure>
 						</div>
 					</section>
 					<!--
@@ -569,7 +559,7 @@
 					<section id="bq3g4">
 						<h3>Scrollable Equal Height Galleries</h3>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/mun/embed?css,output" data-height="13em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/mun/embed?css,output" data-height="13em"></figure>
 						</div>
 					</section>
 					<!--
@@ -578,7 +568,7 @@
 					<section id="c3t56">
 						<h3>Easy Proportional Tabs</h3>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/tac/embed?css,output" data-height="13em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/tac/embed?css,output" data-height="13em"></figure>
 						</div>
 					</section>
 					<!--
@@ -587,7 +577,7 @@
 					<section id="ibuae">
 						<h3>Cool Image Galleries</h3>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/kir/embed?css,output" data-height="14em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/kir/embed?css,output" data-height="14em"></figure>
 						</div>
 					</section>
 				</section>
@@ -692,7 +682,7 @@
 						<h3>LESS (or SASS) to the Rescue</h3>
 						<h4>Mixins for Your Sanity</h4>
 						<div>
-							<figure data-jsbin data-src="//localhost:3000/viv/embed?css,output" data-height="12em"></figure>
+							<figure data-jsbin data-src="http://localhost:3000/viv/embed?css,output" data-height="12em"></figure>
 						</div>
 						<p>
 							From this gist:<br>
